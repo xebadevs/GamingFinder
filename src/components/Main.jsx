@@ -1,5 +1,7 @@
 export default function Main() {
-    return (
-        <p>Scurch!</p>
+    return(
+        <div>
+            <p>Closting</p>
+        </div>
     )
 }

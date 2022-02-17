@@ -1,7 +1,7 @@
+import Navbar from "./navbar"
+
 export default function Main() {
     return(
-        <div>
-            <p>Closting</p>
-        </div>
+        <Navbar />
     )
 }

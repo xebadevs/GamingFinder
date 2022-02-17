@@ -19,7 +19,7 @@ export default function Home() {
                 <h1>GamingFinder</h1>
             </div>
             <div>
-                <button className="btn btn-warning" onClick={ goToMain }>Continue</button>
+                <button className="btn btn-secondary" onClick={ goToMain }>Continue</button>
             </div>
         </div>
     )

@@ -1,11 +1,11 @@
-import { colorChange } from "../features/colorChange"
 import Navbar from "./navbar"
+import { ColorChange } from "../features/colorChange"
 
 export default function Main() {
     return(
         <div>
             <Navbar />
-            <colorChange />
+            <ColorChange />
         </div>
     )
 }

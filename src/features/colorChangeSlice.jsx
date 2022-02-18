@@ -8,10 +8,14 @@ export const colorChangeSlice = createSlice({
     reducers: {
         turnGreen: (state) => {
             state.colorSlice = 'green'
+        },
+        turnBlue: (state) => {
+            state.colorSlice = 'blue'
         }
     }
 })
 
 export const { turnGreen } = colorChangeSlice.actions
+export const { turnBlue } = colorChangeSlice.actions
 
 export default colorChangeSlice.reducer

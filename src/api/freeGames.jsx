@@ -8,7 +8,8 @@ export default function FreeGames(props){
     useEffect(() => {
         
         // ------ Permission request to: https://cors-anywhere.herokuapp.com/corsdemo ------
-        let url = "https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/games"
+        // let url = "https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/games"
+        let url = "https://www.freetogame.com/api/game?id=452"
 
         axios.get(url)
         .then(res => {
@@ -22,7 +23,7 @@ export default function FreeGames(props){
     return(
         <div>
             <hr />
-        {freeGames.map((g, key) => <li key={key}>{g.id}</li>)}
+        {freeGames.map((g, key) => <li key={key}>El id es: <b>{g.id}</b></li>)}
         This is something
         </div>
     )

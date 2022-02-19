@@ -2,22 +2,19 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 export default function GetGames(props){
-    const [games, setGames] = useState([])
+    const [valores, setValores] = useState([])
 
     useEffect(() => {
-        axios.get('https://www.freetogame.com/api/games')
-            .then(res => {
-                const data = res.data
-                setGames(data.title)
-            })
+        axios.get("https://mindicador.cl/api/dolar")
+        .then(res => {
+            const data = res.data
+            setValores(data.serie)
+        })
     }, [])
 
-    return (
+    return(
         <div>
-            {games.map((v) => {
-                <li>{v.games}</li>
-            })}
-            <p>Everything</p>
+            {valores.map((v) => <li>{v.valor}</li>)}
         </div>
     )
 }

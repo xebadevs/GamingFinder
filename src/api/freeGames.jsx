@@ -2,26 +2,28 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 export default function FreeGames(props){
-    const [valores, setValores] = useState([])
+    const [freeGames, setFreeGames] = useState([])
 
     
     useEffect(() => {
         
-        let axios_config = {headers: {'Access-Control-Allow-Origin': '*'}}
-        // let url = "https://www.freetogame.com/api/games"
-        let url = "https://www.freetogame.com/api/games"
+        // ------ Permission request to: https://cors-anywhere.herokuapp.com/corsdemo ------
+        // let url = "https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/games"
+        let url = "https://www.freetogame.com/api/game?id=452"
 
-        axios.get(url, axios_config)
+        axios.get(url)
         .then(res => {
             const data = res.data
-            // setValores(data.serie)
-            console.log(data)
+            setFreeGames(data)
         })
     }, [])
 
+    console.log(freeGames)
+
     return(
         <div>
-        {/* {valores.map((v, key) => <li key={key}>{v.valor}</li>)} */}
+            <hr />
+        {freeGames.map((g, key) => <li key={key}>El id es: <b>{g.id}</b></li>)}
         This is something
         </div>
     )

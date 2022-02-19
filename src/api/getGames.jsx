@@ -14,7 +14,7 @@ export default function GetGames(props){
 
     return(
         <div>
-            {valores.map((v) => <li>{v.valor}</li>)}
+            {valores.map((v, key) => <li key={key}>{v.valor}</li>)}
         </div>
     )
 }

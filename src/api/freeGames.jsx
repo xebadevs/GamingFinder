@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 export default function FreeGames(props){
-    const [valores, setValores] = useState([])
+    const [freeGames, setFreeGames] = useState([])
 
     
     useEffect(() => {
@@ -13,15 +13,16 @@ export default function FreeGames(props){
         axios.get(url)
         .then(res => {
             const data = res.data
-            // setValores(data.serie)
-            console.log(data)
+            setFreeGames(data)
         })
     }, [])
+
+    console.log(freeGames)
 
     return(
         <div>
             <hr />
-        {/* {valores.map((v, key) => <li key={key}>{v.valor}</li>)} */}
+        {freeGames.map((g, key) => <li key={key}>{g.id}</li>)}
         This is something
         </div>
     )

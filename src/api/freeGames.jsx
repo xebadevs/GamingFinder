@@ -7,9 +7,8 @@ export default function FreeGames(props){
     
     useEffect(() => {
         
-        // let axios_config = {headers: {'Access-Control-Allow-Origin': '*'}}
-        // let url = "https://www.freetogame.com/api/games"
-        let url = "https://www.freetogame.com/api/games"
+        // ------ Permission request to: https://cors-anywhere.herokuapp.com/corsdemo ------
+        let url = "https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/games"
 
         axios.get(url)
         .then(res => {
@@ -21,6 +20,7 @@ export default function FreeGames(props){
 
     return(
         <div>
+            <hr />
         {/* {valores.map((v, key) => <li key={key}>{v.valor}</li>)} */}
         This is something
         </div>

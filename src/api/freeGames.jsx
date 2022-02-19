@@ -7,11 +7,11 @@ export default function FreeGames(props){
     
     useEffect(() => {
         
-        let axios_config = {headers: {'Access-Control-Allow-Origin': '*'}}
+        // let axios_config = {headers: {'Access-Control-Allow-Origin': '*'}}
         // let url = "https://www.freetogame.com/api/games"
         let url = "https://www.freetogame.com/api/games"
 
-        axios.get(url, axios_config)
+        axios.get(url)
         .then(res => {
             const data = res.data
             // setValores(data.serie)

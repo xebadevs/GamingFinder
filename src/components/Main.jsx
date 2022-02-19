@@ -1,6 +1,7 @@
 import Navbar from "./navbar"
 import { ColorChange } from "../features/colorChange"
 import GetGames from "../api/getGames"
+import FreeGames from "../api/freeGames"
 
 export default function Main() {
     return(
@@ -8,6 +9,7 @@ export default function Main() {
             <Navbar />
             <ColorChange />
             <GetGames />
+            <FreeGames />
         </div>
     )
 }

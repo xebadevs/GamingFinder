@@ -14,15 +14,18 @@ export default function AxiosProof(){
         }
     };   
     
+    let closting = []
 
     axios.request(options).then(function (response) {
         let closting = response.data
         console.log(closting);
+        console.log('----------------------------------------')
+        console.log(closting[0].title)
     }).catch(function (error) {
         console.error(error);
     });   
     
-
+    
 
 
     return (

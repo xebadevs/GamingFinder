@@ -12,8 +12,8 @@ export default function Main() {
             <ColorChange />
             {/* <GetGames /> */}
             {/* <FreeGames /> */}
-            {/* <AxiosProof /> */}
-            <PlaceHolder />
+            <AxiosProof />
+            {/* <PlaceHolder /> */}
         </div>
     )
 }

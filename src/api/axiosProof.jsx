@@ -11,6 +11,12 @@ headers: {
     }
 }; 
 
+function Capitalize(str){
+    return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+let inputString = Capitalize('')    
+
 export default function AxiosProof(){
 
     const [posts, setPosts] = useState([])
@@ -26,14 +32,31 @@ export default function AxiosProof(){
             })
         }, [])
         
-    console.log(posts)
+    let min = posts.title
+    console.log(min)
+
 
     return (
         <div>
+            <h1>Game Titles:</h1>
             <ul>
-                {posts.map(post => (
+                
+            {posts.filter(post => post.title.includes('Age', 'age')).map(posts => (
+        <li key={posts.id}>
+          {posts.title}
+        </li>
+      ))}
+
+
+
+
+                {/* {posts.map(post => (
                     <li key={post.id}>{post.title}</li>
-                ))}
+                ))} */}
+
+
+
+
             </ul>
         </div>
     )

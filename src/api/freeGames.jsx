@@ -9,7 +9,8 @@ export default function FreeGames(props){
         
         // ------ Permission request to: https://cors-anywhere.herokuapp.com/corsdemo ------
         // let url = "https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/games"
-        let url = "https://www.freetogame.com/api/game?id=452"
+        let url = "https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/game?id=452"
+        // let url = "https://www.freetogame.com/api/game?id=452"
 
         axios.get(url)
         .then(res => {
@@ -23,7 +24,7 @@ export default function FreeGames(props){
     return(
         <div>
             <hr />
-        {freeGames.map((g, key) => <li key={key}>El id es: <b>{g.id}</b></li>)}
+        {freeGames.map((g, key) => <li key={key}>El id es: <b>{g.title}</b></li>)}
         This is something
         </div>
     )

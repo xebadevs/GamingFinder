@@ -20,16 +20,20 @@ export default function AxiosProof(){
         let closting = response.data
         console.log(closting);
         console.log('----------------------------------------')
-        console.log(closting[0].title)
     }).catch(function (error) {
         console.error(error);
     });   
     
     
-
-
+    
+    
     return (
-        <p>Apiiiiiiiii</p>
+        <div>
+            <p>Apiiiiiiiii</p>
+            <p>
+                {closting[0]}
+            </p>    
+        </div>
     )
 
 

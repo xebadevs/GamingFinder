@@ -2,19 +2,20 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 function PlaceHolder() {
-    const [posts, setPosts] = useState()
+    const [posts, setPosts] = useState([])
 
     useEffect(() => {
         axios
             .get('https://jsonplaceholder.typicode.com/posts')
             .then(res => {
-                console.log(res)
                 setPosts(res.data)
             })
             .catch(err => {
                 console.log(err)
             })
-    }, [])
+        }, [])
+
+        console.log(posts)
 
     return (
         <div>

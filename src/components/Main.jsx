@@ -12,7 +12,7 @@ export default function Main() {
             <ColorChange />
             {/* <GetGames /> */}
             {/* <FreeGames /> */}
-            <AxiosProof />
+            {/* <AxiosProof /> */}
             <PlaceHolder />
         </div>
     )

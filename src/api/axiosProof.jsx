@@ -10,7 +10,7 @@ let tags = tag1 + '.' + tag2 + '.' + tag3
 let options = {
 method: 'GET',
 url: 'https://free-to-play-games-database.p.rapidapi.com/api/filter',
-params: {tag: tags, platform: 'pc'},
+params: {_limit: 10, tag: tags, platform: 'pc'},
 headers: {
     'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
     'x-rapidapi-key': 'a747c78b0emshbb6611ca068d29cp19a88ajsnd06816a76109'

@@ -5,7 +5,7 @@ import { turnBlue } from "./colorChangeSlice";
 
 
 export function ColorChange(){
-    const initialColor = useSelector((state) => state.colorChange.colorSlice)
+    const initialColor = useSelector((state) => state.colorChange.color)
     const dispatch = useDispatch()
 
     return(

@@ -12,7 +12,7 @@ export default function Main() {
     return(
         <div>
             <Navbar />
-            {/* <ColorChange /> */}
+            <ColorChange />
             <ByRelease />
             <Wrapper />
             {/* <GetGames /> */}

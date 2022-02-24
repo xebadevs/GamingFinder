@@ -2,8 +2,12 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Posts from '../components/Posts'
 import Pagination from '../components/Pagination'
+import { useSelector } from 'react-redux'
+
 
 function PlaceHolderTwo() {
+    const condition = useSelector((state) => state.showWrapper.value)
+    console.log(condition)
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
@@ -32,11 +36,13 @@ function PlaceHolderTwo() {
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
     return (
+        (condition === true &&
         <div className="className container mt-5">
             <h1 className="className text-primary mb-3">My Blog</h1>
             <Posts posts={currentPosts} loading={loading} />
             <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
         </div>
+    )
     )
 }
 

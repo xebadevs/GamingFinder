@@ -2,6 +2,7 @@ import { LatestGames } from "./LatestGames";
 import { PopularGames } from "./PopularGames";
 import { RecommendedGames } from "./RecommendedGames";
 import { useSelector } from 'react-redux'
+import { ShowWrapper } from "../../features/ShowWrapper";
 
 export default function Wrapper(){
     const condition = useSelector((state) => state.colorChange.color)
@@ -15,6 +16,7 @@ export default function Wrapper(){
             <RecommendedGames />
             <PopularGames />
             <LatestGames />
+            <ShowWrapper />
         </div>
         )
     )

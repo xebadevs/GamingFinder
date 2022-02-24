@@ -5,12 +5,14 @@ import { useSelector } from 'react-redux'
 import { ShowWrapper } from "../../features/showWrapper";
 
 export default function Wrapper(){
-    const condition = useSelector((state) => state.colorChange.color)
+    const color = useSelector((state) => state.colorChange.color)
+    console.log(color)
+    const condition = useSelector((state) => state.showWrapper.value)
     console.log(condition)
 
 
     return(
-        (condition === 'blue' &&
+        (color === 'blue' &&
         <div>
             <h1>Wrapper Component</h1>
             <RecommendedGames />

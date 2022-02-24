@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import turnToGreen from '../features/colorChangeSlice'
+import changeColor from '../features/colorChangeSlice'
+import changeCondition from '../features/showWrapperSlice'
 
 export default configureStore({
     reducer: {
-        colorChange: turnToGreen
+        colorChange: changeColor,
+        showWrapper: changeCondition
     },
 })

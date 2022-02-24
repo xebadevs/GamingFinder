@@ -4,16 +4,18 @@ export const showWrapperSlice = createSlice({
     name: 'showWrapper',
     initialState: {
         value: false
-},
+    },
     reducers: {
-        showMe: (state) => {
+        turnTrue: (state) => {
             state.value = true
         },
-        hideMe: (state) => {
+        turnFalse: (state) => {
             state.value = false
         }
-    }    
+    }
 })
 
-export const { showMe } = showWrapperSlice.actions
-export const { hideMe } = showWrapperSlice.actions
+export const { turnTrue } = showWrapperSlice.actions
+export const { turnFalse } = showWrapperSlice.actions
+
+export default showWrapperSlice.reducer

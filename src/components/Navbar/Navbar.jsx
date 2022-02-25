@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { turnTrue } from '../features/showWrapperSlice'
+import { turnTrue } from '../../features/showWrapperSlice'
 
 export default function Navbar(){
 

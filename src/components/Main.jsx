@@ -1,4 +1,4 @@
-import Navbar from "./Navbar"
+import Navbar from "./Navbar/Navbar"
 import { ColorChange } from "../features/colorChange"
 import GetGames from "../api/getGames"
 import FreeGames from "../api/freeGames"

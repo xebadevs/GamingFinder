@@ -26,6 +26,7 @@ function PlaceHolderTwo() {
         }, [])
 
          // console.log(posts)
+         console.log('condition' + condition)
 
     // Get current posts
     const indexOfLastPost = currentPage * postsPerPage

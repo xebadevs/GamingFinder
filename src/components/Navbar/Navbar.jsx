@@ -1,13 +1,8 @@
 import { useDispatch } from 'react-redux'
 import { turnTrue } from '../../features/showWrapperSlice'
-
 export default function Navbar(){
 
-  const dispatch = useDispatch()
-
-
-
-
+const dispatch = useDispatch(turnTrue)
 
   return(
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">

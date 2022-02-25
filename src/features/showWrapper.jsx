@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { turnTrue } from "./showWrapperSlice";
 import { turnFalse } from "./showWrapperSlice";
 
-
 export function ShowWrapper(){
     const initialCondition = useSelector((state) => state.showWrapper.value)
     const dispatch = useDispatch()

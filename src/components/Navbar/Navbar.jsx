@@ -1,8 +1,15 @@
 import { useDispatch } from 'react-redux'
 import { turnTrue } from '../../features/showWrapperSlice'
-export default function Navbar(){
+import { useNavigate } from 'react-router-dom'
 
-const dispatch = useDispatch(turnTrue)
+
+export default function Navbar(){
+  
+  const navigate = useNavigate()
+
+  function goToPage(page) {
+    navigate('/' + page)
+  }
 
   return(
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -15,7 +22,7 @@ const dispatch = useDispatch(turnTrue)
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             
           <li className="nav-item">
-              <a className="nav-link" href="#" id="navbarDropdown" role="button" onClick={() => dispatch(turnTrue())}>
+              <a className="nav-link" href="#" id="navbarDropdown" role="button" onClick={ goToPage('')}>
                 by release
               </a>
             </li>

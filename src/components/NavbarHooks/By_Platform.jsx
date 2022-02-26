@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
 
-export default function By_Release({endpoint, sort, tag, platform}) {
+export default function By_Release({endpoint, sort, tag, platform, title}) {
 
   let options = {
   method: 'GET',
@@ -14,31 +14,25 @@ export default function By_Release({endpoint, sort, tag, platform}) {
   }; 
 
   const [posts, setPosts] = useState([])
-  const [loading, setLoading] = useState(false)
+  let condition = true
+  let filter_search = 'a'
 
   useEffect(() => {
-    setLoading(true)
-    axios
-      .get(options.url, options)
-      .then(res => {
-          setPosts(res.data)
-      })
-      .catch(err => {
-          console.log(err)
-      })
-      setLoading(false)
-    }, [])
-
-
-  if(loading){
-    return <h2>Loading...</h2>
-  }
+      axios
+          .get(options.url, options)
+          .then(res => {
+              setPosts(res.data)
+          })
+          .catch(err => {
+              console.log(err)
+          })
+      }, [])
 
   return (
     <div>
-      <h1>MMO Component</h1>
+      <h1>{title} GAMES (PC Meanwhile)</h1>
       <ul>                    
-        {posts.map(posts => (
+        {condition && posts.filter(post => post.title.includes(filter_search)).map(posts => (
           <li key={posts.id}>
             {posts.title}
           </li>

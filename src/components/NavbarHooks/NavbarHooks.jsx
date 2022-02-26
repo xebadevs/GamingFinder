@@ -10,8 +10,9 @@ import Racing from './Racing'
 import Sports from './Sports'
 import Social from './Social'
 import Fighting from './Fighting'
-import PC from './PC'
 import Web_Browser from "./Web_Browser"
+
+import By_Platform from "./By_Platform"
 
 
 const NavbarHooks = () => {
@@ -72,8 +73,10 @@ const NavbarHooks = () => {
             </nav>
 
             <div>
-                {active === 'By Release' && <By_Release />}
-                {active === 'MMO' && <MMO />}
+                {/* {active === 'By Release' && <By_Release tag='2d' />} */}
+                {active === 'By Release' && <By_Release endpoint='games' sort='release_date' tag='2d' />}
+
+                {active === 'MMO' && <MMO endpoint='filter' tag='mmo' />}
                 {active === 'MMORPG' && <MMORPG />}
                 {active === 'Shooter' && <Shooter />}
                 {active === 'Strategy' && <Strategy />}
@@ -83,8 +86,11 @@ const NavbarHooks = () => {
                 {active === 'Sports' && <Sports />}
                 {active === 'Social' && <Social />}
                 {active === 'Fighting' && <Fighting />}
-                {active === 'PC' && <PC />}
-                {active === 'Web Browser' && <Web_Browser />}
+
+                {active === 'By Platform' && <By_Platform />}
+
+                {active === 'PC' && <By_Platform endpoint='games' platform='pc' title='PC' />}
+                {active === 'Web Browser' && <Web_Browser endpoint='games' platform='browser' />}
 
             </div>
         </div>

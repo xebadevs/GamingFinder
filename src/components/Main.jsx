@@ -6,18 +6,20 @@ import AxiosProof from "../api/axiosProof"
 import PlaceHolder from "../api/placeHolder"
 import PlaceHolderTwo from "../api/placeHolderTwo"
 import Wrapper from "./Wrapper/Wrapper"
+import NavbarHooks from "../components/NavbarHooks/NavbarHooks"
 
 export default function Main() {
     return(
         <div>
-            <Navbar />
-            <ColorChange />
-            <Wrapper />
+            <NavbarHooks />
+            {/* <Navbar /> */}
+            {/* <ColorChange /> */}
+            {/* <Wrapper /> */}
             {/* <GetGames /> */}
             {/* <FreeGames /> */}
             {/* <AxiosProof /> */}
             {/* <PlaceHolder /> */}
-            <PlaceHolderTwo />
+            {/* <PlaceHolderTwo /> */}
         </div>
     )
 }

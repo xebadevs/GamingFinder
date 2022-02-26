@@ -1,66 +1,64 @@
-import { useDispatch } from 'react-redux'
-import { turnTrue } from '../../features/showWrapperSlice'
 import { useNavigate } from 'react-router-dom'
 
-
 export default function Navbar(){
-  
-  const navigate = useNavigate()
 
+  // const URL = "http://localhost:3000"
+  const navigate = useNavigate()
+  
   function goToPage(page) {
     navigate('/' + page)
   }
 
   return(
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">LOGO</a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            
-          <li className="nav-item">
-              <a className="nav-link" href="#" id="navbarDropdown" role="button" onClick={ goToPage('')}>
-                by release
-              </a>
-            </li>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/main">LOGO</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              
+            <li className="nav-item">
+                <a className="nav-link" id="navbarDropdown" role="button" href="/byrelease">
+                  by release
+                </a>
+              </li>
 
-          <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                by genre
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a className="dropdown-item" href="#">MMO</a></li>
-                <li><a className="dropdown-item" href="#">MMORPG</a></li>
-                <li><a className="dropdown-item" href="#">Shooter</a></li>
-                <li><a className="dropdown-item" href="#">Strategy</a></li>
-                <li><a className="dropdown-item" href="#">Moba</a></li>
-                <li><a className="dropdown-item" href="#">Card games</a></li>
-                <li><a className="dropdown-item" href="#">Racing</a></li>
-                <li><a className="dropdown-item" href="#">Sports</a></li>
-                <li><a className="dropdown-item" href="#">Social</a></li>
-                <li><a className="dropdown-item" href="#">Fighting</a></li>
-              </ul>
-            </li>
-            
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                by platform
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a className="dropdown-item" href="#">PC</a></li>
-                <li><a className="dropdown-item" href="#">Web Browser</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form className="d-flex">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">Search</button>
-          </form>
+                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  by genre
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a className="dropdown-item" href="#">MMO</a></li>
+                  <li><a className="dropdown-item" href="#">MMORPG</a></li>
+                  <li><a className="dropdown-item" href="#">Shooter</a></li>
+                  <li><a className="dropdown-item" href="#">Strategy</a></li>
+                  <li><a className="dropdown-item" href="#">Moba</a></li>
+                  <li><a className="dropdown-item" href="#">Card games</a></li>
+                  <li><a className="dropdown-item" href="#">Racing</a></li>
+                  <li><a className="dropdown-item" href="#">Sports</a></li>
+                  <li><a className="dropdown-item" href="#">Social</a></li>
+                  <li><a className="dropdown-item" href="#">Fighting</a></li>
+                </ul>
+              </li>
+              
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  by platform
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a className="dropdown-item" href="#">PC</a></li>
+                  <li><a className="dropdown-item" href="#">Web Browser</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form className="d-flex">
+              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button className="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
   )
 }

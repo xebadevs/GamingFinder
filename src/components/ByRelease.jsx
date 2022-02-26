@@ -1,7 +1,10 @@
-
+import Navbar from '../components/Navbar/Navbar'
 
 export default function ByRelease(){
     return(
-        <p>ByRelease Component</p>
+        <div>
+            <Navbar />        
+            <p>ByRelease Component</p>
+        </div>
     )
 }

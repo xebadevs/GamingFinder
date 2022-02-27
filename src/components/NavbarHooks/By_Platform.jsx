@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from "axios";
 
 export default function By_Release({endpoint, sort, tag, platform, title}) {
-
+  
   let options = {
   method: 'GET',
   url: 'https://free-to-play-games-database.p.rapidapi.com/api/' + endpoint,
@@ -14,25 +14,28 @@ export default function By_Release({endpoint, sort, tag, platform, title}) {
   }; 
 
   const [posts, setPosts] = useState([])
-  let condition = true
-  let filter_search = 'a'
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-      axios
-          .get(options.url, options)
-          .then(res => {
-              setPosts(res.data)
-          })
-          .catch(err => {
-              console.log(err)
-          })
-      }, [])
 
-  return (
+    axios
+        .get(options.url, options)
+        .then(res => {
+            setPosts(res.data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+        setLoading(false)
+    }, [])
+
+
+  return (    
     <div>
       <h1>{title} GAMES (PC Meanwhile)</h1>
+      {loading && <h2>Loading...</h2>}
       <ul>                    
-        {condition && posts.filter(post => post.title.includes(filter_search)).map(posts => (
+        {posts.map(posts => (
           <li key={posts.id}>
             {posts.title}
           </li>

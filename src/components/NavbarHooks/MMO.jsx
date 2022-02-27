@@ -16,6 +16,7 @@ export default function By_Release({endpoint, sort, tag, platform}) {
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(false)
 
+  
   useEffect(() => {
     setLoading(true)
     axios

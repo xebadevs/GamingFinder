@@ -18,7 +18,6 @@ export default function By_Release({endpoint, sort, tag, platform}) {
   const [posts, setPosts] = useState([])
   const [active, setActive] = useState('')
   const [gameId, setGameId] = useState(null)
-  const [condition, setCondition] = useState(true)
   
   let filter_search = 'x'
 
@@ -34,14 +33,13 @@ export default function By_Release({endpoint, sort, tag, platform}) {
       }, [])
 
   function getGameId(id){
-    setCondition(false)
     setActive('Single Game')
     setGameId(id)
   }
 
   return (
     <div>
-      {condition &&
+      {active === '' &&
       <div>
         <h1>By Release Component</h1>
         <ul>                    
@@ -55,6 +53,7 @@ export default function By_Release({endpoint, sort, tag, platform}) {
 }
         <div>
           {active === 'Single Game' && <SingleGame id={gameId} />}
+          {active === 'Single Game' && <button className='btn btn-outline-primary' onClick={()=> setActive('')}>Return</button>}
         </div>
 
 

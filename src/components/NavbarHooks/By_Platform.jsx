@@ -47,13 +47,15 @@ export default function By_Release({endpoint, sort, tag, platform, title}) {
     <div>
       <h1>{title} GAMES (PC Meanwhile)</h1>
       {loading && <h2>Loading...</h2>}
-      <ul>                    
         {currentPosts.map(posts => (
-          <li key={posts.id}>
-            {posts.title}
-          </li>
+
+          <div className="card" key={posts.id}>
+            <img src={posts.thumbnail} className="card-img-top" alt="..."></img>
+            <li key={posts.id}>
+              {posts.title}
+            </li>
+          </div>
         ))}
-      </ul>
       <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
     </div>
   )

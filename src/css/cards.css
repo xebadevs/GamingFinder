@@ -4,8 +4,9 @@
     grid-auto-rows: 320px;
     /* gap: 2rem; */
     margin: 15px;
-  }
+}
 
 .card-gap {
     margin: 15px;
+    cursor: pointer;
 }

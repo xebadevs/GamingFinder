@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
-
+import SingleGame from '../SingleGame';
 
 
 export default function By_Release({endpoint, sort, tag, platform}) {
@@ -16,8 +16,11 @@ export default function By_Release({endpoint, sort, tag, platform}) {
   }; 
 
   const [posts, setPosts] = useState([])
-  let condition = true
-  let filter_search = 'a'
+  const [active, setActive] = useState('')
+  const [gameId, setGameId] = useState(null)
+  const [condition, setCondition] = useState(true)
+  
+  let filter_search = 'x'
 
   useEffect(() => {
       axios
@@ -30,18 +33,31 @@ export default function By_Release({endpoint, sort, tag, platform}) {
           })
       }, [])
 
+  function getGameId(id){
+    setCondition(false)
+    setActive('Single Game')
+    setGameId(id)
+  }
+
   return (
     <div>
-      <h1>By Release Component</h1>
-      <ul>                    
-        {condition && posts.filter(post => post.title.includes(filter_search)).map(posts => (
-          <li key={posts.id}>
-            {posts.title}
-          </li>
-        ))}
-      </ul>
+      {condition &&
+      <div>
+        <h1>By Release Component</h1>
+        <ul>                    
+          {posts.filter(post => post.title.includes(filter_search)).map(posts => (
+            <li key={posts.id} onClick={()=> getGameId(posts.id)}>
+              {posts.title}
+            </li>
+          ))}
+        </ul>
+      </div>
+}
+        <div>
+          {active === 'Single Game' && <SingleGame id={gameId} />}
+        </div>
 
 
-    </div>
+      </div>
   )
 }

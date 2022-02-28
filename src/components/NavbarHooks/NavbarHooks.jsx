@@ -13,11 +13,12 @@ import Fighting from './Fighting'
 import Web_Browser from "./Web_Browser"
 
 import By_Platform from "./By_Platform"
+import SingleGame from "../SingleGame"
 
 
 const NavbarHooks = () => {
 
-    const [active, setActive] = useState('')    
+    const [active, setActive] = useState('')
 
     return(
         <div>
@@ -92,6 +93,7 @@ const NavbarHooks = () => {
                 {active === 'PC' && <By_Platform endpoint='games' platform='pc' title='PC' />}
                 {active === 'Web Browser' && <Web_Browser endpoint='games' platform='browser' />}
 
+                {active === 'Single Game' && <SingleGame />}
             </div>
         </div>
     )

@@ -47,18 +47,24 @@ export default function By_Release({endpoint, sort, tag, platform, title}) {
     <div>
       <h1>{title} GAMES (PC Meanwhile)</h1>
       {loading && <h2>Loading...</h2>}
-        {currentPosts.map(posts => (
 
-          <div className="card" key={posts.id}>
+      <div className='card-container'>
+        {currentPosts.map(posts => (
+          <div className="card card-gap" key={posts.id}>
             <img src={posts.thumbnail} className="card-img-top" alt="..."></img>
-            <h4 key={posts.id}>
-              {posts.title}
-            </h4>
-            <p>{posts.release_date}</p>
-            <p>{posts.platform}</p>
+            <div className='card-body'>
+              <h4 className='card-title' key={posts.id}>
+                {posts.title}
+              </h4>
+              <div>
+                <p>{posts.release_date}</p>
+                <p>{posts.platform}</p>
+              </div>
+            </div>
           </div>
         ))}
-      <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
+        <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
+      </div>
     </div>
   )
 }

@@ -51,9 +51,11 @@ export default function By_Release({endpoint, sort, tag, platform, title}) {
 
           <div className="card" key={posts.id}>
             <img src={posts.thumbnail} className="card-img-top" alt="..."></img>
-            <li key={posts.id}>
+            <h4 key={posts.id}>
               {posts.title}
-            </li>
+            </h4>
+            <p>{posts.release_date}</p>
+            <p>{posts.platform}</p>
           </div>
         ))}
       <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />

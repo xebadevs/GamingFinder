@@ -2,11 +2,26 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     /* grid-auto-rows: 320px; */
-    /* gap: 2rem; */
     margin: 15px;
 }
 
 .card-gap {
     margin: 15px;
     cursor: pointer;
+}
+
+.single-game-cont {
+    width: 100%;
+    margin: auto;
+}
+
+.screenshot-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.screenshot {
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
 }

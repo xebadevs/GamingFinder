@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
-import Posts from '../Posts';
 import Pagination from '../Pagination';
+import SingleGame from '../SingleGame';
 
 export default function By_Release({endpoint, sort, tag, platform, title}) {
   
@@ -42,15 +42,23 @@ export default function By_Release({endpoint, sort, tag, platform, title}) {
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
+  const [gameId, setGameId] = useState(null)
+
+  function getGameId(id){
+    setGameId(id)
+    window.scrollTo(0, 0)
+  }
+
 
   return (    
     <div>
       <h1>{title} GAMES (PC Meanwhile)</h1>
       {loading && <h2>Loading...</h2>}
+      {gameId != null && <SingleGame id={gameId}/>}
 
       <div className='card-container'>
         {currentPosts.map(posts => (
-          <div className="card card-gap" key={posts.id} onClick={() => alert('algo')}>
+          <div className="card card-gap" key={posts.id} onClick={() => getGameId(posts.id)}>
             <img src={posts.thumbnail} className="card-img-top"></img>
             <div className='card-body'>
               <h4 className='card-title' key={posts.id}>

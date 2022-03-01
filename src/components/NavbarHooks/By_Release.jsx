@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
+import SingleGame from '../SingleGame';
 
 
 export default function By_Release({endpoint, sort, tag, platform}) {
@@ -41,7 +42,8 @@ export default function By_Release({endpoint, sort, tag, platform}) {
       <h1>By Release Component</h1>
     {gameId != null &&
       <div>
-        Renderización del juego ID {gameId}
+        <SingleGame />
+        <p>Id Nº: {gameId}</p>
       </div>
     }
 

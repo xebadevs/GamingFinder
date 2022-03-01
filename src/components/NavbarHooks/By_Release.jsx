@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
-import SingleGame from '../SingleGame';
 
 
 export default function By_Release({endpoint, sort, tag, platform}) {
@@ -33,30 +32,36 @@ export default function By_Release({endpoint, sort, tag, platform}) {
       }, [])
 
   function getGameId(id){
-    setActive('Single Game')
+    // setActive('Single Game')
     setGameId(id)
   }
 
   return (
     <div>
-      {active === '' &&
+      <h1>By Release Component</h1>
+    {gameId != null &&
       <div>
-        <h1>By Release Component</h1>
-        <ul>                    
-          {posts.filter(post => post.title.includes(filter_search)).map(posts => (
-            <li key={posts.id} onClick={()=> getGameId(posts.id)}>
-              {posts.title}
-            </li>
-          ))}
-        </ul>
+        Renderización del juego ID {gameId}
       </div>
-}
+    }
+
+      <div>
+        {active === '' &&
         <div>
-          {active === 'Single Game' && <SingleGame id={gameId} />}
-          {active === 'Single Game' && <button className='btn btn-outline-primary' onClick={()=> setActive('')}>Return</button>}
+          <ul>                    
+            {posts.filter(post => post.title.includes(filter_search)).map(posts => (
+              <li key={posts.id} onClick={()=> getGameId(posts.id)}>
+                {posts.title}
+              </li>
+            ))}
+          </ul>
         </div>
-
-
+        }
+      {/* <div>
+        {active === 'Single Game' && <SingleGame id={gameId} />}
+        {active === 'Single Game' && <button className='btn btn-outline-primary' onClick={()=> setActive('')}>Return</button>}
+      </div> */}
       </div>
+    </div>
   )
 }

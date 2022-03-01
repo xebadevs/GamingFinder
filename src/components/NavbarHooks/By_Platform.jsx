@@ -51,7 +51,7 @@ export default function By_Release({endpoint, sort, tag, platform, title}) {
       <div className='card-container'>
         {currentPosts.map(posts => (
           <div className="card card-gap" key={posts.id} onClick={() => alert('algo')}>
-            <img src={posts.thumbnail} className="card-img-top" alt="..."></img>
+            <img src={posts.thumbnail} className="card-img-top"></img>
             <div className='card-body'>
               <h4 className='card-title' key={posts.id}>
                 {posts.title}

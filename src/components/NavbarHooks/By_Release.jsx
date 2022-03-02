@@ -5,6 +5,12 @@ import SingleGame from '../SingleGame';
 
 export default function By_Release({endpoint, sort, tag, platform}) {
 
+  const [posts, setPosts] = useState([])
+  const [active, setActive] = useState('')
+  const [gameId, setGameId] = useState(null)
+  const [firstId, setFirstId] = useState(null)
+
+  let filter_search = 'x'
   let options = {
   method: 'GET',
   url: 'https://free-to-play-games-database.p.rapidapi.com/api/' + endpoint,
@@ -15,12 +21,14 @@ export default function By_Release({endpoint, sort, tag, platform}) {
       }
   }; 
 
-  const [posts, setPosts] = useState([])
-  const [active, setActive] = useState('')
-  const [gameId, setGameId] = useState(null)
-  
-  let filter_search = 'x'
+  function getGameId(id){
+    setFirstId(id)
+    setGameId(id)
+    // setActive(false)
+  }
 
+  console.log('firstId: ' + firstId, 'gameId: ' + gameId)
+  
   useEffect(() => {
       axios
           .get(options.url, options)
@@ -30,19 +38,15 @@ export default function By_Release({endpoint, sort, tag, platform}) {
           .catch(err => {
               console.log(err)
           })
-      }, [])
+  }, [])
 
-  function getGameId(id){
-    // setActive('Single Game')
-    setGameId(id)
-  }
 
   return (
     <div>
       <h1>By Release Component</h1>
     {gameId != null &&
       <div>
-        <SingleGame />
+        <SingleGame id={gameId}/>
         <p>Id Nº: {gameId}</p>
       </div>
     }

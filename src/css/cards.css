@@ -10,9 +10,20 @@
     cursor: pointer;
 }
 
+/* -------------------- SINGLE GAME -------------------- */
 .single-game-cont {
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin: auto;
+}
+
+.single-game-cont h1 {
+    text-align: center;
+}
+
+.single-game-cont .description {
+    text-align: justify;
 }
 
 .screenshot-container {
@@ -22,6 +33,7 @@
 
 .screenshot {
     border: 1px solid red;
-    width: 200px;
+    width: 300px;
     height: 200px;
+    border-radius: 5px;
 }

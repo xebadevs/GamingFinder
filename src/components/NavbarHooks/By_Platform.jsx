@@ -5,6 +5,11 @@ import SingleGame from '../SingleGame';
 
 export default function By_Release({endpoint, sort, tag, platform, title}) {
   
+  const [posts, setPosts] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [currentPage, setCurrentPage] = useState(1)
+  const [postsPerPage] = useState(50)
+
   let options = {
   method: 'GET',
   url: 'https://free-to-play-games-database.p.rapidapi.com/api/' + endpoint,
@@ -15,10 +20,14 @@ export default function By_Release({endpoint, sort, tag, platform, title}) {
       }
   }; 
 
-  const [posts, setPosts] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [currentPage, setCurrentPage] = useState(1)
-  const [postsPerPage] = useState(50)
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage
+  const indexOfFirstPost = indexOfLastPost - postsPerPage
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber)
+  
+  const [gameId, setGameId] = useState(null)
 
 
   useEffect(() => {
@@ -30,23 +39,14 @@ export default function By_Release({endpoint, sort, tag, platform, title}) {
         .catch(err => {
             console.log(err)
         })
-        setLoading(false)
+    setLoading(false)
     }, [])
 
-
-  // Get current posts
-  const indexOfLastPost = currentPage * postsPerPage
-  const indexOfFirstPost = indexOfLastPost - postsPerPage
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
-
-  // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber)
-
-  const [gameId, setGameId] = useState(null)
 
   function getGameId(id){
     setGameId(id)
     window.scrollTo(0, 0)
+
   }
 
 
@@ -56,23 +56,31 @@ export default function By_Release({endpoint, sort, tag, platform, title}) {
       {loading && <h2>Loading...</h2>}
       {gameId != null && <SingleGame id={gameId}/>}
 
-      <div className='card-container'>
-        {currentPosts.map(posts => (
-          <div className="card card-gap" key={posts.id} onClick={() => getGameId(posts.id)}>
-            <img src={posts.thumbnail} className="card-img-top"></img>
-            <div className='card-body'>
-              <h4 className='card-title' key={posts.id}>
-                {posts.title}
-              </h4>
-              <div>
-                <p>{posts.release_date}</p>
-                <p>{posts.platform}</p>
+
+      {gameId === null &&
+      <div>
+        <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
+        <div className='card-container'>
+          {currentPosts.map(posts => (
+            <div className="card card-gap" key={posts.id} onClick={() => getGameId(posts.id)}>
+              <img src={posts.thumbnail} className="card-img-top"></img>
+              <div className='card-body'>
+                <h4 className='card-title' key={posts.id}>
+                  {posts.title}
+                </h4>
+                <div>
+                  <p>{posts.release_date}</p>
+                  <p>{posts.platform}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
         <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
       </div>
+      }
+
+
     </div>
   )
 }

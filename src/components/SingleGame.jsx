@@ -1,65 +1,101 @@
+import axios from "axios";
+import React, { useState, useEffect } from 'react'
+import By_Release from "./NavbarHooks/By_Platform";
 
 
 const SingleGame = ({id}) => {
 
-    
+  const [gameData, setGameData] = useState('')
+
+  let options = {
+    method: 'GET',
+    url: 'https://free-to-play-games-database.p.rapidapi.com/api/game',
+    params: {id: id},
+    headers: {
+      'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
+      'x-rapidapi-key': 'a747c78b0emshbb6611ca068d29cp19a88ajsnd06816a76109'
+    }
+  };
+
+  useEffect(() => {
+    axios
+        .get(options.url, options)
+        .then(res => {
+            setGameData(res.data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }, [])
+
+    // const img1 = gameData.screenshots[0].image
+    // const img2 = gameData.screenshots[1].image
+    // const img3 = gameData.screenshots[2].image
+
+
+    console.log(gameData.title, gameData.id)
 
     return (
         <div className="single-game-cont">
             {/* <h1>Single Game Component</h1> */}
             {/* <div>SingleGame {id}</div> */}
 
-            {/* -------------------------------------------------------------------- */}
             <div className="card col-md-8">
               <div className="row g-6">
                 <div className="col-md-4">
-                  <img src="https://www.freetogame.com/g/452/thumbnail.jpg" className="img-fluid rounded m-2" />
+                  <img src={gameData.thumbnail} className="img-fluid rounded m-2" />
                 </div>
                 <div className="col-md-4">
                   <div className="card-body">
-                    <p>Title: Insert Title Here</p>
-                    <p>Platform: PC / Browser</p>
-                    <p>Genre: Insert Genre Here</p>
-                    <p>Release date: Example 2017</p>
+                    <p>Title: {gameData.title}</p>
+                    <p>Platform: {gameData.platform}</p>
+                    <p>Genre: {gameData.genre}</p>
+                    <p>Release date: {gameData.release_date}</p>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="card-body">
-                    <p>Publisher: Insert Publisher Here</p>
-                    <p>Developer: Insert Developer Here</p>
+                    <p>Publisher: {gameData.publisher}</p>
+                    <p>Developer: {gameData.developer}</p>
                     <button className="btn btn-success">Play it Free!</button>
                   </div>
                 </div>
+
                 <div>
+                  <hr />
                   <h1>Description</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et porro necessitatibus molestias accusantium deleniti nisi odit? Corrupti distinctio fugiat sunt sequi! Facere ullam corporis nobis nulla! Labore nobis, praesentium alias sint numquam perspiciatis non iure facilis est maxime. Atque dicta, reiciendis consequatur porro consequuntur facere harum molestiae quae cum aspernatur, assumenda eos. Asperiores ullam quam reprehenderit incidunt pariatur vitae rem, accusantium, eius porro eligendi facere aperiam! Quod rerum porro illum quaerat aperiam architecto accusamus culpa, nostrum sapiente quas ratione laudantium.</p>
+                  <p className="description m-2">{gameData.description}</p>
               </div>
+
               <div>
+              <hr />
                 <h1>Screenshots</h1>
                 <div className="screenshot-container">
-                  <div className="screenshot col-md-2">Screenshot 1</div>
-                  <div className="screenshot col-md-2">Screenshot 2</div>
-                  <div className="screenshot col-md-2">Screenshot 3</div>
+                  <img src="" alt="" className="screenshot col-md-2" />
+                  <img src="" alt="" className="screenshot col-md-2" />
+                  <img src="" alt="" className="screenshot col-md-2" />
                 </div>
               </div>
+
+
               <div>
+              <hr />
                 <h1>System Requirements</h1>
                   <div className="row">
                     <div className="col-md-4">
                       <div className="card-body">
-                        <p>Device: PC</p>
                         <p>OS: Windows 7 64-Bit (SP1) or Windows 10 64-Bit</p>
+                        <p>Processor: Intel Core i3-4340 or AMD FX-6300</p>
                       </div>
                     </div>
                     <div className="col-md-4">
                       <div className="card-body">
-                        <p>Processor: Intel Core i3-4340 or AMD FX-6300</p>
                         <p>Memory: 8GB RAM</p>
+                        <p>Storage: 175GB HD space</p>
                     </div>
                   </div>
                   <div className="col-md-4">
                       <div className="card-body">
-                        <p>Storage: 175GB HD space</p>
                         <p>Graphics: NVIDIA GeForce GTX 670 / GeForce GTX 1650 or Radeon HD 7950</p>
                     </div>
                   </div>
@@ -67,7 +103,6 @@ const SingleGame = ({id}) => {
               </div>
               </div>
             </div>
-            {/* -------------------------------------------------------------------- */}
         </div>
     )
 }

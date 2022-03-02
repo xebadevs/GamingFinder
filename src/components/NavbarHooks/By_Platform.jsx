@@ -54,7 +54,7 @@ export default function By_Release({endpoint, sort, tag, platform, title}) {
     <div>
       <h1>{title} GAMES (PC Meanwhile)</h1>
       {loading && <h2>Loading...</h2>}
-      {gameId != null && <SingleGame id={gameId}/>}
+      {gameId != null && <SingleGame id={gameId} from='By Platform' />}
 
 
       {gameId === null &&

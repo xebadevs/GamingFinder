@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useState, useEffect } from 'react'
-import By_Release from "./NavbarHooks/By_Platform";
+import By_Platform from './NavbarHooks/By_Platform'
+import By_Release from "./NavbarHooks/Web_Browser";
 
-
-const SingleGame = ({id}) => {
+const SingleGame = ({id, from}) => {
 
   const [gameData, setGameData] = useState('')
+  const [fromWhere, setFromWhere] = useState('')
 
   let options = {
     method: 'GET',
@@ -32,10 +33,17 @@ const SingleGame = ({id}) => {
     // const img2 = gameData.screenshots[1].image
     // const img3 = gameData.screenshots[2].image
 
+    function goTo(){
+      setFromWhere(from)
+      setGameData('')
+      // console.log('FromWhere: ' + fromWhere)
+    }
 
     console.log(gameData.title, gameData.id)
+    console.log('FromWhere: ' + fromWhere)
 
     return (
+      <div>
         <div className="single-game-cont">
             {/* <h1>Single Game Component</h1> */}
             {/* <div>SingleGame {id}</div> */}
@@ -104,6 +112,15 @@ const SingleGame = ({id}) => {
               </div>
             </div>
         </div>
+
+        <div>
+          <button className="btn btn-primary" onClick={goTo}>Return</button>
+        </div>
+
+        <div>
+          {fromWhere === 'By Platform' && <By_Platform endpoint='games' platform='pc' title='PC'/>}
+        </div>
+      </div>
     )
 }
 

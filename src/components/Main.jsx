@@ -14,12 +14,12 @@ export default function Main() {
             <NavbarHooks />
             {/* <Navbar /> */}
             {/* <ColorChange /> */}
-            {/* <Wrapper /> */}
+            <Wrapper />
             {/* <GetGames /> */}
             {/* <FreeGames /> */}
             {/* <AxiosProof /> */}
             {/* <PlaceHolder /> */}
-            {/* <PlaceHolderTwo /> */}
+            <PlaceHolderTwo />
         </div>
     )
 }

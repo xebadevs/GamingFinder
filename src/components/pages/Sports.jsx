@@ -1,11 +1,11 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
 
-export default function Shooter() {
+export default function Sports() {
   return (
     <div>
         <Navbar />
-        <div>Shooter component</div>
+        <div>Sports component</div>
     </div>
   )
 }

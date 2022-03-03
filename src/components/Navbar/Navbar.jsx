@@ -44,8 +44,8 @@ const Navbar = () => {
                         by platform
                         </a>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a className="dropdown-item" href="#">PC</a></li>
-                        <li><a className="dropdown-item" href="#">Web Browser</a></li>
+                        <li><a className="dropdown-item" onClick={() => navigate('/pc')}>PC</a></li>
+                        <li><a className="dropdown-item" onClick={() => navigate('/web_browser')}>Web Browser</a></li>
                         </ul>
                     </li>
                     </ul>

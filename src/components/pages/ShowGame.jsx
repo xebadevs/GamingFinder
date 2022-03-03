@@ -7,6 +7,11 @@ export default function ShowGame() {
 
     const [loading, setLoading] = useState(true)
     const [posts, setPosts] = useState([])
+    const [screenshots, setScreenshots] = useState([])
+    const [image1, setImage1] = useState('')
+    const [image3, setImage2] = useState('')
+    const [image2, setImage3] = useState('')
+    const [requirements, setRequirements] = useState([])
     const { id } = useParams()
     console.log(id)
 
@@ -25,6 +30,11 @@ export default function ShowGame() {
             .get(options.url, options)
             .then(res => {
                 setPosts(res.data)
+                setScreenshots(res.data.screenshots)
+                setRequirements(res.data.minimum_system_requirements)
+                setImage1(res.data.screenshots[0].image)
+                setImage2(res.data.screenshots[1].image)
+                setImage3(res.data.screenshots[2].image)
             setLoading(false)
             })
             .catch(err => {
@@ -32,12 +42,77 @@ export default function ShowGame() {
             })
     }, [])
 
+
     return (
         <div>
             <Navbar />
             <h1>ShowGame Component</h1>
-            <p>Game nº {id}</p>
-            <p>Game title: {posts.title}</p>
+
+<div className="single-game-cont">
+            <div className="card col-md-8">
+              <div className="row g-6">
+                <div className="col-md-4">
+                  <img src={posts.thumbnail} className="img-fluid rounded m-2" />
+                </div>
+                <div className="col-md-4">
+                  <div className="card-body">
+                    <p>Title: {posts.title}</p>
+                    <p>Platform: {posts.platform}</p>
+                    <p>Genre: {posts.genre}</p>
+                    <p>Release date: {posts.release_date}</p>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="card-body">
+                    <p>Publisher: {posts.publisher}</p>
+                    <p>Developer: {posts.developer}</p>
+                    <button className="btn btn-success">Play it Free!</button>
+                  </div>
+                </div>
+
+                <div>
+                  <hr />
+                  <h1>Description</h1>
+                  <p className="description m-2">{posts.description}</p>
+              </div>
+
+              <div>
+              <hr />
+                <h1>Screenshots</h1>
+                <div className="screenshot-container">
+                  <img src={image1} alt="" className="screenshot col-md-2" />
+                  <img src={image2} alt="" className="screenshot col-md-2" />
+                  <img src={image3} alt="" className="screenshot col-md-2" />
+                </div>
+              </div>
+
+              <div>
+              <hr />
+                <h1>System Requirements</h1>
+                  <div className="row">
+                    <div className="col-md-4">
+                      <div className="card-body">
+                        <p>OS: {requirements.os}</p>
+                        <p>Processor: {requirements.processor}</p>
+                      </div>
+                    </div>
+                    <div className="col-md-4">
+                      <div className="card-body">
+                        <p>Memory: {requirements.memory}</p>
+                        <p>Storage: {requirements.storage}</p>
+                    </div>
+                  </div>
+                  <div className="col-md-4">
+                      <div className="card-body">
+                        <p>Graphics: {requirements.graphics}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+        </div>
+
         </div>
     )
 }

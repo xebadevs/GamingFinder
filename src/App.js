@@ -2,7 +2,6 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import Main from './components/Main'
-import Closting from './components/Wrapper/Closting';
 import By_release from './components/pages/By_release';
 import MMO from './components/pages/MMO';
 import MMORPG from './components/pages/MMORPG';
@@ -37,7 +36,6 @@ function App() {
         <Route path="/fighting" element={<Fighting />}></Route>
         <Route path="/pc" element={<PC />}></Route>
         <Route path="/web_browser" element={<Web_browser />}></Route>
-        <Route path="/closting" element={<Closting />}></Route>
       </Routes>
     </BrowserRouter>
   )

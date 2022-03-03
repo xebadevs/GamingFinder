@@ -1,7 +1,6 @@
 import { LatestGames } from "./LatestGames";
 import { PopularGames } from "./PopularGames";
 import { RecommendedGames } from "./RecommendedGames";
-import { useSelector } from 'react-redux'
 import { useNavigate } from "react-router-dom";
 
 export default function Wrapper(){

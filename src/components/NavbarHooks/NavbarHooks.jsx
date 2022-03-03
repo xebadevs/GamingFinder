@@ -1,16 +1,5 @@
 import { useState } from "react"
-import By_Release from './By_Release'
-import MMO from "./MMO"
-import MMORPG from "./MMORPG"
-import Shooter from './Shooter'
-import Strategy from './Strategy'
-import Moba from './Moba'
-import Card_Games from './Card_Games'
-import Racing from './Racing'
-import Sports from './Sports'
-import Social from './Social'
-import Fighting from './Fighting'
-import Web_Browser from "./Web_Browser"
+import By_Release_Two from './By_Release_Two'
 
 import By_Platform from "./By_Platform"
 import SingleGame from "../SingleGame"
@@ -42,16 +31,6 @@ const NavbarHooks = () => {
                         by genre
                         </a>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a className="dropdown-item" href="#" onClick={() => setActive('MMO')}>MMO</a></li>
-                        <li><a className="dropdown-item" href="#" onClick={() => setActive('MMORPG')}>MMORPG</a></li>
-                        <li><a className="dropdown-item" href="#" onClick={() => setActive('Shooter')}>Shooter</a></li>
-                        <li><a className="dropdown-item" href="#" onClick={() => setActive('Strategy')}>Strategy</a></li>
-                        <li><a className="dropdown-item" href="#" onClick={() => setActive('Moba')}>Moba</a></li>
-                        <li><a className="dropdown-item" href="#" onClick={() => setActive('Card Games')}>Card Games</a></li>
-                        <li><a className="dropdown-item" href="#" onClick={() => setActive('Racing')}>Racing</a></li>
-                        <li><a className="dropdown-item" href="#" onClick={() => setActive('Sports')}>Sports</a></li>
-                        <li><a className="dropdown-item" href="#" onClick={() => setActive('Social')}>Social</a></li>
-                        <li><a className="dropdown-item" href="#" onClick={() => setActive('Fighting')}>Fighting</a></li>
                         </ul>
                     </li>
                     
@@ -75,23 +54,11 @@ const NavbarHooks = () => {
 
             <div>
                 {/* {active === 'By Release' && <By_Release tag='2d' />} */}
-                {active === 'By Release' && <By_Release endpoint='games' sort='release_date' tag='2d' />}
-
-                {active === 'MMO' && <MMO endpoint='filter' tag='mmo' />}
-                {active === 'MMORPG' && <MMORPG />}
-                {active === 'Shooter' && <Shooter />}
-                {active === 'Strategy' && <Strategy />}
-                {active === 'Moba' && <Moba />}
-                {active === 'Card Games' && <Card_Games />}
-                {active === 'Racing' && <Racing />}
-                {active === 'Sports' && <Sports />}
-                {active === 'Social' && <Social />}
-                {active === 'Fighting' && <Fighting />}
+                {active === 'By Release' && <By_Release_Two endpoint='games' sort='release_date' tag='2d' />}
 
                 {active === 'By Platform' && <By_Platform />}
 
                 {active === 'PC' && <By_Platform endpoint='games' platform='pc' title='PC' />}
-                {active === 'Web Browser' && <Web_Browser endpoint='games' platform='browser' />}
 
                 {active === 'Single Game' && <SingleGame />}
             </div>

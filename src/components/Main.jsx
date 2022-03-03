@@ -11,15 +11,15 @@ import NavbarHooks from "../components/NavbarHooks/NavbarHooks"
 export default function Main() {
     return(
         <div>
-            <NavbarHooks />
-            {/* <Navbar /> */}
+            <Navbar />
+            {/* <NavbarHooks /> */}
             {/* <ColorChange /> */}
             <Wrapper />
             {/* <GetGames /> */}
             {/* <FreeGames /> */}
             {/* <AxiosProof /> */}
             {/* <PlaceHolder /> */}
-            <PlaceHolderTwo />
+            {/* <PlaceHolderTwo /> */}
         </div>
     )
 }

@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from 'react'
 import By_Platform from './NavbarHooks/By_Platform'
-import By_Release from "./NavbarHooks/Web_Browser";
 
 const SingleGame = ({id, from}) => {
 

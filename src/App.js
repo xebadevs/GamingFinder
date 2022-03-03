@@ -37,7 +37,7 @@ function App() {
         <Route path="/fighting" element={<Fighting />}></Route>
         <Route path="/pc" element={<PC />}></Route>
         <Route path="/web_browser" element={<Web_browser />}></Route>
-        <Route path="/game" element={<ShowGame />}></Route>
+        <Route path="/game/:id" element={<ShowGame />}></Route>
       </Routes>
     </BrowserRouter>
   )

@@ -62,7 +62,7 @@ export default function ShowGames({endpoint, sort, tag, platform, title}) {
                   <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
                 <div className='card-container'>
                     {currentPosts.map(posts => (
-                        <div className="card card-gap" key={posts.id} onClick={() => showGame(posts.id)}>
+                        <div className="card card-gap" key={posts.id} onClick={() => navigate('/game/' + posts.id)}>
                         <img src={posts.thumbnail} className="card-img-top"></img>
                         <div className='card-body'>
                         <h4 className='card-title' key={posts.id}>
@@ -80,7 +80,7 @@ export default function ShowGames({endpoint, sort, tag, platform, title}) {
                 </div>
                 }
         
-        {gameId != null && <ShowGame id={gameId} />}
+        {gameId != null && <ShowGame />}
   
         </div>
   )

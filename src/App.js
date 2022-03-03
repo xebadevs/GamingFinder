@@ -37,7 +37,6 @@ function App() {
         <Route path="/fighting" element={<Fighting />}></Route>
         <Route path="/pc" element={<PC />}></Route>
         <Route path="/web_browser" element={<Web_browser />}></Route>
-
         <Route path="/closting" element={<Closting />}></Route>
       </Routes>
     </BrowserRouter>

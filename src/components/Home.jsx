@@ -4,10 +4,6 @@ import { useNavigate } from 'react-router-dom'
 export default function Home() {
     const navigate = useNavigate()
 
-    function goToMain(){
-        navigate('/main')
-    }
-
     return (
         <div>
             <div className="d-flex justify-content-center">
@@ -19,7 +15,7 @@ export default function Home() {
                 <h1>GamingFinder</h1>
             </div>
             <div>
-                <button className="btn btn-secondary" onClick={ goToMain }>Continue</button>
+                <button className="btn btn-secondary" onClick={() => navigate('/main')}>Continue</button>
             </div>
         </div>
     )

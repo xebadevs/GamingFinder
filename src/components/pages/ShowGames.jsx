@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
 import Pagination from '../Pagination';
-import SingleGame from '../SingleGame';
 import { useNavigate } from "react-router-dom";
-import MMORPG from './MMORPG';
 import ShowGame from './ShowGame';
 
 
@@ -49,8 +47,8 @@ export default function ShowGames({endpoint, sort, tag, platform, title}) {
             })
     }, [])
 
-    return (
 
+    return (
         <div>
             <div>
             {loading && <h2>Loading...</h2>}

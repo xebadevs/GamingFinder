@@ -13,7 +13,6 @@ export default function ShowGame() {
     const [image2, setImage3] = useState('')
     const [requirements, setRequirements] = useState([])
     const { id } = useParams()
-    console.log(id)
 
     let options = {
         method: 'GET',
@@ -44,75 +43,87 @@ export default function ShowGame() {
 
 
     return (
-        <div>
-            <Navbar />
-            <h1>ShowGame Component</h1>
+      <div>
+          <Navbar />
 
-<div className="single-game-cont">
-            <div className="card col-md-8">
-              <div className="row g-6">
-                <div className="col-md-4">
-                  <img src={posts.thumbnail} className="img-fluid rounded m-2" />
-                </div>
-                <div className="col-md-4">
-                  <div className="card-body">
-                    <p>Title: {posts.title}</p>
-                    <p>Platform: {posts.platform}</p>
-                    <p>Genre: {posts.genre}</p>
-                    <p>Release date: {posts.release_date}</p>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="card-body">
-                    <p>Publisher: {posts.publisher}</p>
-                    <p>Developer: {posts.developer}</p>
-                    <button className="btn btn-success">Play it Free!</button>
-                  </div>
-                </div>
+          <div>
+          {loading && <h2>Loading...</h2>}
+          </div>
 
-                <div>
-                  <hr />
-                  <h1>Description</h1>
-                  <p className="description m-2">{posts.description}</p>
+          <div className="single-game-cont mt-5 mb-5">
+          <div className="card col-md-8">
+            <div className="row g-6">
+              <div className="col-md-4">
+                <img src={posts.thumbnail} className="img-fluid rounded m-2" />
               </div>
-
-              <div>
-              <hr />
-                <h1>Screenshots</h1>
-                <div className="screenshot-container">
-                  <img src={image1} alt="" className="screenshot col-md-2" />
-                  <img src={image2} alt="" className="screenshot col-md-2" />
-                  <img src={image3} alt="" className="screenshot col-md-2" />
+              <div className="col-md-4">
+                <div className="card-body mt-3">
+                  <p>Title: {posts.title}</p>
+                  <p>Platform: {posts.platform}</p>
+                  <p>Genre: {posts.genre}</p>
+                  <p>Release date: {posts.release_date}</p>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="card-body mt-3">
+                  <p>Publisher: {posts.publisher}</p>
+                  <p>Developer: {posts.developer}</p>
+                  <br />
+                  <a href={posts.game_url} target="_blank" className="btn btn-success play-it-free">Play it Free!</a>
                 </div>
               </div>
 
               <div>
-              <hr />
-                <h1>System Requirements</h1>
-                  <div className="row">
-                    <div className="col-md-4">
-                      <div className="card-body">
-                        <p>OS: {requirements.os}</p>
-                        <p>Processor: {requirements.processor}</p>
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="card-body">
-                        <p>Memory: {requirements.memory}</p>
-                        <p>Storage: {requirements.storage}</p>
+                <hr />
+                <h1>Description</h1>
+                <p className="description m-2">{posts.description}</p>
+            </div>
+
+            <div>
+            <hr />
+              <h1>Screenshots</h1>
+              <div className="screenshot-container">
+                  <div className="screenshot col-md-2">
+                      <img src={image1} alt="" className="screenshot col-md-2" />
+                  </div>
+                  <div className="screenshot col-md-2">
+                    <img src={image2} alt="" className="screenshot col-md-2" />
+                  </div>
+                  <div className="screenshot col-md-2">
+                    <img src={image3} alt="" className="screenshot col-md-2" />
+                  </div>
+              </div>
+            </div>
+
+            <div>
+            <hr />
+              <h1>System Requirements</h1>
+                <div className="row">
+                  <div className="col-md-4">
+                    <div className="card-body">
+                      <p>OS: {requirements.os}</p>
+                      <p>Processor: {requirements.processor}</p>
                     </div>
                   </div>
                   <div className="col-md-4">
-                      <div className="card-body">
-                        <p>Graphics: {requirements.graphics}</p>
-                    </div>
+                    <div className="card-body">
+                      <p>Memory: {requirements.memory}</p>
+                      <p>Storage: {requirements.storage}</p>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                    <div className="card-body">
+                      <p>Graphics: {requirements.graphics}</p>
                   </div>
                 </div>
               </div>
-              </div>
             </div>
-        </div>
+            </div>
+          </div>
+      </div>
 
-        </div>
+      <br />
+
+      </div>
     )
 }

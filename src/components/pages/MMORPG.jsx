@@ -13,9 +13,11 @@ export default function By_Release({search}) {
   const [firstId, setFirstId] = useState(null)
   const { game } = useParams()
 
-  console.log(game)
+  const lower = game.toLowerCase()
+  const alt_game = lower.charAt(0).toUpperCase() + lower.slice(1)
+  console.log(alt_game)
 
-  let filter_search = {search}
+  let filter_search = alt_game
   let options = {
   method: 'GET',
   url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
@@ -47,15 +49,14 @@ export default function By_Release({search}) {
     <div>
       <Navbar />
       <h1>MMORPG Component</h1>
-    {/* {gameId != null &&
+    {lower === '' &&
       <div>
-        <SingleGame id={gameId}/>
-        <p>Id Nº: {gameId}</p>
+        <p>Not matches</p>
       </div>
     }
 
       <div>
-        {active === '' &&
+        {game != '' &&
         <div>
           <ul>                    
             {posts.filter(post => post.title.includes(filter_search)).map(posts => (
@@ -66,7 +67,7 @@ export default function By_Release({search}) {
           </ul>
         </div>
         }
-      </div> */}
+      </div>
     </div>
   )
 }

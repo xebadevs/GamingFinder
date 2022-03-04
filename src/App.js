@@ -26,7 +26,7 @@ function App() {
         <Route path="/main" element={<Main />}></Route>
         <Route path="/by_release" element={<By_release />}></Route>
         <Route path="/mmo" element={<MMO />}></Route>
-        <Route path="/mmorpg" element={<MMORPG />}></Route>
+        <Route path="/mmorpg/:game" element={<MMORPG />}></Route>
         <Route path="/shooter" element={<Shooter />}></Route>
         <Route path="/strategy" element={<Strategy />}></Route>
         <Route path="/moba" element={<Moba />}></Route>

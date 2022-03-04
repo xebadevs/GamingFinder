@@ -1,8 +1,17 @@
+import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import MMORPG from '../pages/MMORPG'
 
 const Navbar = () => {
 
   const navigate = useNavigate()
+  const [search, setSearch] = useState('')
+  const [goAndSearch, setGoAndSearch] = useState(false)
+
+  function searchGame(){
+        console.log(search)
+        setGoAndSearch(true)
+  }
 
     return(
         <div>
@@ -50,8 +59,8 @@ const Navbar = () => {
                     </li>
                     </ul>
                     <form className="d-flex">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button className="btn btn-outline-success" type="submit">Search</button>
+                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={e => setSearch(e.target.value)} />
+                    <button className="btn btn-outline-success" type="submit" onClick={() => navigate('/mmorpg/' + search)}>Search</button>
                     </form>
                 </div>
                 </div>

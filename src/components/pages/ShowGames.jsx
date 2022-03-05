@@ -61,17 +61,17 @@ export default function ShowGames({endpoint, sort, tag, platform, title}) {
                 <div className='card-container'>
                     {currentPosts.map(posts => (
                         <div className="card card-gap" key={posts.id} onClick={() => navigate('/game/' + posts.id)}>
-                        <img src={posts.thumbnail} className="card-img-top"></img>
-                        <div className='card-body'>
-                        <h4 className='card-title' key={posts.id}>
-                            {posts.title}
-                        </h4>
-                        <div>
-                            <p>{posts.release_date}</p>
-                            <p>{posts.platform}</p>
+                            <img src={posts.thumbnail} className="card-img-top"></img>
+                            <div className='card-body'>
+                                <h4 className='card-title' key={posts.id}>
+                                    {posts.title}
+                                </h4>
+                                <div>
+                                    <p>{posts.release_date}</p>
+                                    <p>{posts.platform}</p>
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                    </div>
                     ))}
                 </div>
                 <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />

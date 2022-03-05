@@ -17,7 +17,7 @@ import PC from './components/pages/PC';
 import Web_browser from './components/pages/Web_browser';
 import ShowGame from './components/pages/ShowGame';
 import Error from './components/pages/Error';
-
+import Search from './components/pages/Search'
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
         <Route path="/main" element={<Main />}></Route>
         <Route path="/by_release" element={<By_release />}></Route>
         <Route path="/mmo" element={<MMO />}></Route>
-        <Route path="/mmorpg/:game" element={<MMORPG />}></Route>
+        <Route path="/mmorpg" element={<MMORPG />}></Route>
         <Route path="/shooter" element={<Shooter />}></Route>
         <Route path="/strategy" element={<Strategy />}></Route>
         <Route path="/moba" element={<Moba />}></Route>
@@ -39,6 +39,7 @@ function App() {
         <Route path="/pc" element={<PC />}></Route>
         <Route path="/web_browser" element={<Web_browser />}></Route>
         <Route path="/game/:id" element={<ShowGame />}></Route>
+        <Route path="/search/:game" element={<Search />}></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
     </BrowserRouter>

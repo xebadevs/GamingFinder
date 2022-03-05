@@ -1,10 +1,11 @@
 import React from 'react'
-import PopularGame from './MainGame'
+import MainGame from './MainGame'
 
-export default function Popular() {
+export default function MostPlayed() {
   return (
     <div>
         <h1>Most Played Component</h1>
+        <MainGame id={365} />
     </div>
   )
 }

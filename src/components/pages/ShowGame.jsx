@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 
 export default function ShowGame() {
@@ -12,6 +12,7 @@ export default function ShowGame() {
     const [image3, setImage2] = useState('')
     const [image2, setImage3] = useState('')
     const [requirements, setRequirements] = useState([])
+    const navigate = useNavigate()
     const { id } = useParams()
 
     let options = {
@@ -37,7 +38,8 @@ export default function ShowGame() {
             setLoading(false)
             })
             .catch(err => {
-                console.log(err)
+              console.log(err)
+              navigate('./error')
             })
     }, [])
 
@@ -95,13 +97,14 @@ export default function ShowGame() {
               </div>
             </div>
 
+            {requirements != '' &&
             <div>
             <hr />
               <h1>System Requirements</h1>
                 <div className="row">
                   <div className="col-md-4">
                     <div className="card-body">
-                      <p>OS: {requirements.os ? requirements.os : 'No data'}</p>
+                      <p>OS: {requirements.os}</p>
                       <p>Processor: {requirements.processor}</p>
                     </div>
                   </div>
@@ -118,6 +121,7 @@ export default function ShowGame() {
                 </div>
               </div>
             </div>
+              }
             </div>
           </div>
       </div>

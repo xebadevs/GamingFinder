@@ -1,7 +1,7 @@
-import { LatestGames } from "./LatestGames";
-import { PopularGames } from "./PopularGames";
-import { RecommendedGames } from "./RecommendedGames";
 import { useNavigate } from "react-router-dom";
+import Latest from './Latests'
+import MostPlayed from './MostPlayed'
+import Recommended from "./Recommended";
 
 export default function Wrapper(){
     const navigate = useNavigate()
@@ -13,11 +13,9 @@ export default function Wrapper(){
     return(
         <div>
             <h1>Wrapper Component</h1>
-            <RecommendedGames />
-            <PopularGames />
-            <LatestGames />
-
-            <button className="btn btn-primary" onClick={ goToByRelease }>Go to Closting Component</button>
+            <MostPlayed />
+            <Latest />
+            <Recommended />
         </div>
         )
 }

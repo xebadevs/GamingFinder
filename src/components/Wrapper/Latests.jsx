@@ -1,4 +1,3 @@
-import Navbar from '../Navbar/Navbar'
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
 import Pagination from '../Pagination';
@@ -14,8 +13,9 @@ export default function By_release() {
   const navigate = useNavigate()
 
   // Get current posts
-  const indexOfLastPost = currentPage * postsPerPage
-  const indexOfFirstPost = indexOfLastPost - postsPerPage
+  const indexOfLastPost = 12
+  const indexOfFirstPost = 0
+
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber)
@@ -45,34 +45,23 @@ useEffect(() => {
 
   return (
     <div>
-      <Navbar />
-
-      <div>
-        {loading && <h2>Loading...</h2>}
+      <h1>Latests Component</h1>
+      <div className='card-container'>
+        {currentPosts.map(posts => (
+            <div className="card card-gap" key={posts.id} onClick={() => navigate('/game/' + posts.id)}>
+            <img src={posts.thumbnail} className="card-img-top"></img>
+            <div className='card-body'>
+            <h4 className='card-title' key={posts.id}>
+                {posts.title}
+            </h4>
+            <div>
+                <p>{posts.release_date}</p>
+                <p>{posts.platform}</p>
+            </div>
+            </div>
+        </div>
+        ))}
       </div>
-
-      <h1>By_release component</h1>
-      <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
-
-        <div className='card-container'>
-          {currentPosts.map(posts => (
-              <div className="card card-gap" key={posts.id} onClick={() => navigate('/game/' + posts.id)}>
-              <img src={posts.thumbnail} className="card-img-top"></img>
-              <div className='card-body'>
-              <h4 className='card-title' key={posts.id}>
-                  {posts.title}
-              </h4>
-              <div>
-                  <p>{posts.release_date}</p>
-                  <p>{posts.platform}</p>
-              </div>
-              </div>
-          </div>
-          ))}
-      </div>
-
-      <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
-
     </div>
   )
 }

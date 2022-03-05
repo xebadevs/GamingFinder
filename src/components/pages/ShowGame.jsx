@@ -101,7 +101,7 @@ export default function ShowGame() {
                 <div className="row">
                   <div className="col-md-4">
                     <div className="card-body">
-                      <p>OS: {requirements.os}</p>
+                      <p>OS: {requirements.os ? requirements.os : 'No data'}</p>
                       <p>Processor: {requirements.processor}</p>
                     </div>
                   </div>

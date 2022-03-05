@@ -5,7 +5,11 @@ export default function MostPlayed() {
   return (
     <div>
         <h1>Most Played Component</h1>
-        <MainGame id={365} />
+        <div className='card-container'>
+            <MainGame id={365} />
+            <MainGame id={475} />
+            <MainGame id={516} />
+        </div>
     </div>
   )
 }

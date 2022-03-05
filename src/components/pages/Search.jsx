@@ -52,17 +52,17 @@ export default function By_Release({search}) {
         <div className='card-container'>
             {posts.filter(post => post.title.includes(filter_search)).map(posts => (
                 <div className="card card-gap" key={posts.id} onClick={() => navigate('/game/' + posts.id)}>
-                <img src={posts.thumbnail} className="card-img-top"></img>
-                <div className='card-body'>
-                    <h4 className='card-title' key={posts.id}>
-                        {posts.title}
-                    </h4>
-                    <div>
-                        <p>{posts.release_date}</p>
-                        <p>{posts.platform}</p>
+                    <img src={posts.thumbnail} className="card-img-top"></img>
+                    <div className='card-body'>
+                        <h4 className='card-title' key={posts.id}>
+                            {posts.title}
+                        </h4>
+                        <div>
+                            <p>{posts.release_date}</p>
+                            <p>{posts.platform}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
             ))}
         </div>
     </div>

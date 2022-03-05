@@ -1,9 +1,11 @@
 import axios from "axios";
 import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 export default function MainGame({ id }) {
 
   const [posts, setPosts] = useState([])
+  const navigate = useNavigate()
 
   let options = {
       method: 'GET',
@@ -29,13 +31,14 @@ export default function MainGame({ id }) {
 
   return (
     <div>
-      <h1>MainGame Component</h1>
-      <div className="card main-card">
+      <div className="card main-card" onClick={() => navigate('/game/' + posts.id)}>
         <img src={posts.thumbnail} className="card-img-top" alt="..." />
-        <div className="card-body">
+        <div className="card-body card-content">
           <h5 className="card-title"> {posts.title} </h5>
           <p className="card-text"> {posts.short_description} </p>
-          <a href={posts.game_url} target="_blank" className="btn btn-primary">Play for Free!</a>
+          <div>
+            <a href={posts.game_url} target="_blank" className="btn btn-primary">Play for Free!</a>
+          </div>
         </div>
       </div>
     </div>

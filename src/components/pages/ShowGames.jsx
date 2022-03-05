@@ -66,10 +66,8 @@ export default function ShowGames({endpoint, sort, tag, platform, title}) {
                                 <h4 className='card-title' key={posts.id}>
                                     {posts.title}
                                 </h4>
-                                <div>
-                                    <p>{posts.release_date}</p>
-                                    <p>{posts.platform}</p>
-                                </div>
+                                <p>{posts.release_date}</p>
+                                <p>{posts.platform}</p>
                             </div>
                         </div>
                     ))}

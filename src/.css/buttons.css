@@ -1,0 +1,18 @@
+.btn-search, .btn-search {
+    border: 1px solid var(--bg-third);
+    background-color: var(--bg-third);
+    color: var(--text-p);
+}
+
+.btn-search:hover, .btn-search:focus {
+    background-color: var(--bg-main);
+    color: whitesmoke;
+}
+
+.play-it-free {
+    background-color: var(--bg-four);
+}
+
+.play-it-free:hover, .play-it-free:focus {
+    background-color: var(--bg-three);
+}

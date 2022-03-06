@@ -1,3 +1,9 @@
+/* -------------------- ALL CARDS -------------------- */
+.card {
+    background-color: var(--bg-two);
+    color: var(--text-p)
+}
+
 /* -------------------- VARIOUS GAMES -------------------- */
 .card-container {
     display: grid;
@@ -10,9 +16,13 @@
 
 .card-gap {
     width: 300px;
-    height: 330px;
+    height: 320px;
     margin: 15px;
     cursor: pointer;
+}
+
+.card p {
+    margin-bottom: 5px;
 }
 
 
@@ -28,10 +38,6 @@
     text-align: center;
 }
 
-.play-it-free {
-    background-color: pink;
-}
-
 .single-game-cont .description {
     text-align: justify;
 }
@@ -41,6 +47,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     place-items: center;
     gap: 15px;
+    margin-bottom: 15px;
 }
 
 .screenshot {

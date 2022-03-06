@@ -1,7 +1,18 @@
 @import url(./css/cards.css);
+@import url(.css/buttons.css);
+@import url(.css/colors.css);
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--bg-main);
+}
+
+h1 {
+  color: var(--bg-four)
+}
+
+.card button {
+  background-color: red;
 }

@@ -6,6 +6,7 @@ export default function MainGame({ id }) {
 
   const [posts, setPosts] = useState([])
   const navigate = useNavigate()
+  const [loading, setLoading] = useState(true)
 
   let options = {
       method: 'GET',
@@ -21,8 +22,8 @@ export default function MainGame({ id }) {
       axios
           .get(options.url, options)
           .then(res => {
-              setPosts(res.data)
-              console.log(posts.game_url)
+            setPosts(res.data)
+            setLoading(false)
           })
           .catch(err => {
               console.log(err)
@@ -31,6 +32,9 @@ export default function MainGame({ id }) {
 
   return (
     <div>
+      <div>
+        {loading && <h2>Loading...</h2>}
+      </div>
       <div className="card main-card" onClick={() => navigate('/game/' + posts.id)}>
         <img src={posts.thumbnail} className="card-img-top" alt="..." />
         <div className="card-body card-content">

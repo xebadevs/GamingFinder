@@ -1,17 +1,15 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import Search from '../pages/Search'
 
 const Navbar = () => {
+    const navigate = useNavigate()
+    const [search, setSearch] = useState('')
+    const [goAndSearch, setGoAndSearch] = useState(false)
 
-  const navigate = useNavigate()
-  const [search, setSearch] = useState('')
-  const [goAndSearch, setGoAndSearch] = useState(false)
-
-  function searchGame(){
-        console.log(search)
-        setGoAndSearch(true)
-  }
+    function searchGame(){
+            console.log(search)
+            setGoAndSearch(true)
+    }
 
     return(
         <div>
@@ -60,7 +58,7 @@ const Navbar = () => {
                     </ul>
                     <form className="d-flex">
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" maxLength={18} pattern="[a-zA-Z0-9]" onChange={e => setSearch(e.target.value)} />
-                    <button className="btn btn-outline-success" type="submit" onClick={() => navigate('/search/' + search)}>Search</button>
+                    <button className="btn btn-search" type="submit" onClick={() => navigate('/search/' + search)}>Search</button>
                     </form>
                 </div>
                 </div>

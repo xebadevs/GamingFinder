@@ -1,0 +1,14 @@
+:root {
+    --bg-main: #261C2C;
+    --bg-two: #3E2C41;
+    --bg-three: #5C527F;
+    --bg-four: #6E85B2;
+    --text-h1: white;
+    --text-titles: white;
+    --text-p: white;
+}
+
+/* Bootstrap navbar edition */
+.bg-dark {
+    background-color: var(--bg-main) !important;
+}

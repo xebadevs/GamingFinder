@@ -13,7 +13,7 @@ export default function By_release() {
   const navigate = useNavigate()
 
   // Get current posts
-  const indexOfLastPost = 12
+  const indexOfLastPost = 15
   const indexOfFirstPost = 0
 
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
@@ -55,8 +55,8 @@ useEffect(() => {
                 {posts.title}
             </h4>
             <div>
-                <p>{posts.release_date}</p>
-                <p>{posts.platform}</p>
+                <p>Release: {posts.release_date}</p>
+                <p>Genre: {posts.genre}</p>
             </div>
             </div>
         </div>

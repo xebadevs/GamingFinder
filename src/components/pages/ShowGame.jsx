@@ -15,6 +15,8 @@ export default function ShowGame() {
     const navigate = useNavigate()
     const { id } = useParams()
 
+console.log(requirements)
+
     let options = {
         method: 'GET',
         url: 'https://free-to-play-games-database.p.rapidapi.com/api/game',
@@ -71,7 +73,7 @@ export default function ShowGame() {
                   <p>Publisher: {posts.publisher}</p>
                   <p>Developer: {posts.developer}</p>
                   <br />
-                  <a href={posts.game_url} target="_blank" className="btn btn-success play-it-free">Play it Free!</a>
+                  <a href={posts.game_url} target="_blank" className="btn play-it-free">Play it Free!</a>
                 </div>
               </div>
 
@@ -97,7 +99,7 @@ export default function ShowGame() {
               </div>
             </div>
 
-            {requirements != '' &&
+            {requirements != undefined &&
             <div>
             <hr />
               <h1>System Requirements</h1>

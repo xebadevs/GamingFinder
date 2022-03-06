@@ -59,9 +59,10 @@
 
 /* -------------------- MAIN GAME -------------------- */
 
-.main-card {
+.main-card, .maingame-cont {
     max-width: 430px;
     min-height: 470px;
+    cursor: pointer;
 }
 
 .card-content {

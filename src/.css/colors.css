@@ -7,8 +7,3 @@
     --text-titles: white;
     --text-p: white;
 }
-
-/* Bootstrap navbar edition */
-.bg-dark {
-    background-color: var(--bg-main) !important;
-}

@@ -28,21 +28,22 @@ console.log(requirements)
         };
 
     useEffect(() => {
-        axios
-            .get(options.url, options)
-            .then(res => {
-                setPosts(res.data)
-                setScreenshots(res.data.screenshots)
-                setRequirements(res.data.minimum_system_requirements)
-                setImage1(res.data.screenshots[0].image)
-                setImage2(res.data.screenshots[1].image)
-                setImage3(res.data.screenshots[2].image)
-            setLoading(false)
-            })
-            .catch(err => {
-              console.log(err)
-              navigate('./error')
-            })
+      axios
+      .get(options.url, options)
+      .then(res => {
+          setPosts(res.data)
+          setScreenshots(res.data.screenshots)
+          setRequirements(res.data.minimum_system_requirements)
+          window.scrollTo(0, 0)
+          setImage1(res.data.screenshots[0].image)
+          setImage2(res.data.screenshots[1].image)
+          setImage3(res.data.screenshots[2].image)
+          setLoading(false)
+      })
+      .catch(err => {
+        console.log(err)
+        navigate('./error')
+      })
     }, [])
 
 
@@ -58,10 +59,10 @@ console.log(requirements)
           <div className="card col-md-8">
             <div className="row g-6">
               <div className="col-md-4">
-                <img src={posts.thumbnail} className="img-fluid rounded m-2" />
+                <img src={posts.thumbnail} className="img-fluid rounded m-3" />
               </div>
               <div className="col-md-4">
-                <div className="card-body mt-3">
+                <div className="card-body mt-4 p-height">
                   <p>Title: {posts.title}</p>
                   <p>Platform: {posts.platform}</p>
                   <p>Genre: {posts.genre}</p>
@@ -69,31 +70,31 @@ console.log(requirements)
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="card-body mt-3">
+                <div className="card-body mt-4 p-height">
                   <p>Publisher: {posts.publisher}</p>
                   <p>Developer: {posts.developer}</p>
                   <br />
-                  <a href={posts.game_url} target="_blank" className="btn play-it-free">Play it Free!</a>
+                  <a href={posts.game_url} target="_blank" className="btn btn-play">Play it Free!</a>
                 </div>
               </div>
 
               <div>
                 <hr />
                 <h1>Description</h1>
-                <p className="description m-2">{posts.description}</p>
+                <p className="description m-4">{posts.description}</p>
             </div>
 
             <div>
             <hr />
               <h1>Screenshots</h1>
               <div className="screenshot-container">
-                  <div className="screenshot col-md-2">
+                  <div className="screenshot col-md-2 mt-3">
                       <img src={image1} alt="" className="screenshot col-md-2" />
                   </div>
-                  <div className="screenshot col-md-2">
+                  <div className="screenshot col-md-2 mt-3">
                     <img src={image2} alt="" className="screenshot col-md-2" />
                   </div>
-                  <div className="screenshot col-md-2">
+                  <div className="screenshot col-md-2 mt-3">
                     <img src={image3} alt="" className="screenshot col-md-2" />
                   </div>
               </div>
@@ -104,20 +105,20 @@ console.log(requirements)
             <hr />
               <h1>System Requirements</h1>
                 <div className="row">
-                  <div className="col-md-4">
-                    <div className="card-body">
+                  <div className="col-md-4 mt-3">
+                    <div className="card-body p-height">
                       <p>OS: {requirements.os}</p>
                       <p>Processor: {requirements.processor}</p>
                     </div>
                   </div>
-                  <div className="col-md-4">
-                    <div className="card-body">
+                  <div className="col-md-4 mt-3">
+                    <div className="card-body p-height">
                       <p>Memory: {requirements.memory}</p>
                       <p>Storage: {requirements.storage}</p>
                   </div>
                 </div>
-                <div className="col-md-4">
-                    <div className="card-body">
+                <div className="col-md-4 mt-3">
+                    <div className="card-body p-height">
                       <p>Graphics: {requirements.graphics}</p>
                   </div>
                 </div>

@@ -9,10 +9,10 @@
     color: whitesmoke;
 }
 
-.play-it-free {
+.btn-play {
     background-color: var(--bg-four);
 }
 
-.play-it-free:hover, .play-it-free:focus {
+.btn-play:hover, .btn-play:focus {
     background-color: var(--bg-three);
 }

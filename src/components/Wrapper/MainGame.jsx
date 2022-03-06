@@ -31,7 +31,7 @@ export default function MainGame({ id }) {
   }, [])
 
   return (
-    <div>
+    <div className="maingame-cont">
       <div>
         {loading && <h2>Loading...</h2>}
       </div>
@@ -41,7 +41,7 @@ export default function MainGame({ id }) {
           <h5 className="card-title"> {posts.title} </h5>
           <p className="card-text"> {posts.short_description} </p>
           <div>
-            <a href={posts.game_url} target="_blank" className="btn btn-primary">Play for Free!</a>
+            <a href={posts.game_url} target="_blank" className="btn btn-play">Play for Free!</a>
           </div>
         </div>
       </div>

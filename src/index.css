@@ -29,3 +29,8 @@ h2 {
 .card button {
   background-color: red;
 }
+
+.pagination-cont {
+  display: grid;
+  place-items: center;
+}

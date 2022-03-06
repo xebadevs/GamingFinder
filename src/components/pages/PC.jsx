@@ -1,11 +1,12 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
+import ShowGames from './ShowGames'
 
 export default function PC() {
   return (
     <div>
         <Navbar />
-        <div>PC component</div>
+        <ShowGames endpoint='games' platform='pc' title='PC' />
     </div>
   )
 }

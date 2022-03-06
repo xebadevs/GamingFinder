@@ -1,6 +1,7 @@
 import Latest from './Latests'
 import MostPlayed from './MostPlayed'
 import Recommended from "./Recommended";
+import Footer from '../Footer';
 
 export default function Wrapper(){
 
@@ -9,6 +10,7 @@ export default function Wrapper(){
             <MostPlayed />
             <Latest />
             <Recommended />
+            <Footer />
         </div>
         )
 }

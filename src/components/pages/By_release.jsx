@@ -4,7 +4,6 @@ import axios from "axios";
 import Pagination from '../Pagination';
 import { useNavigate } from "react-router-dom";
 
-
 export default function By_release() {
 
   const [posts, setPosts] = useState([])
@@ -30,28 +29,25 @@ export default function By_release() {
         }
     }; 
 
-
-useEffect(() => {
-    axios
-        .get(options.url, options)
-        .then(res => {
-            setPosts(res.data)
-        setLoading(false)
-        })
-        .catch(err => {
-            console.log(err)
-        })
-}, [])
+  useEffect(() => {
+      axios
+          .get(options.url, options)
+          .then(res => {
+              setPosts(res.data)
+          setLoading(false)
+          })
+          .catch(err => {
+              console.log(err)
+          })
+  }, [])
 
   return (
     <div>
       <Navbar />
-
-      <div>
-      </div>
-
       <h1 className='mt-5'>GAMES BY RELEASE</h1>
+      <hr className='hr-main' />
       {loading && <h2>Loading...</h2>}
+
       <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
 
         <div className='card-container'>
@@ -72,7 +68,6 @@ useEffect(() => {
       </div>
 
       <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
-
     </div>
   )
 }

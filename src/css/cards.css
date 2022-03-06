@@ -115,7 +115,7 @@
 }
 
 .hr-main {
-    color: var(--text-h1);
+    border: 1px solid var(--btn-border);
     max-width: 40%;
     margin: 0 auto 30px auto;
 }

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import ShowGame from './ShowGame';
 
 
-export default function ShowGames({endpoint, sort, tag, platform, title}) {
+export default function ShowGames({endpoint, tag, platform, title}) {
 
     const navigate = useNavigate()
     const [posts, setPosts] = useState([])
@@ -24,16 +24,12 @@ export default function ShowGames({endpoint, sort, tag, platform, title}) {
     let options = {
         method: 'GET',
         url: 'https://free-to-play-games-database.p.rapidapi.com/api/' + endpoint,
-        params: {'sort-by': sort, tag: tag, platform: platform},
+        params: {tag: tag, platform: platform},
         headers: {
             'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
             'x-rapidapi-key': 'a747c78b0emshbb6611ca068d29cp19a88ajsnd06816a76109'
             }
         }; 
-
-    function showGame(id){
-        setGameId(id)
-        }
 
     useEffect(() => {
         axios
@@ -50,13 +46,11 @@ export default function ShowGames({endpoint, sort, tag, platform, title}) {
 
     return (
         <div>
-            <div>
-            {loading && <h2>Loading...</h2>}
-            </div>
-        
         {gameId === null &&
             <div>
-                <h1>{title} GAMES</h1>
+                <h1 className='mt-5'>{title} GAMES</h1>
+                <hr className='hr-main' />
+                {loading && <h2>Loading...</h2>}
                   <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
                 <div className='card-container'>
                     {currentPosts.map(posts => (

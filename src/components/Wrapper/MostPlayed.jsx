@@ -4,8 +4,8 @@ import MainGame from './MainGame'
 export default function MostPlayed() {
   return (
     <div>
-        <h1>Most Played Component</h1>
-        <div className='card-container'>
+        <h1>Most Played Games</h1>
+        <div className='card-container-main'>
             <MainGame id={365} />
             <MainGame id={475} />
             <MainGame id={516} />

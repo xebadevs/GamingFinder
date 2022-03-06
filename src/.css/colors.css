@@ -1,9 +1,12 @@
 :root {
-    --bg-main: #261C2C;
-    --bg-two: #3E2C41;
-    --bg-three: #5C527F;
-    --bg-four: #6E85B2;
-    --text-h1: white;
+    --bg-main: #172a32;
+    --bg-navbar: #0e1c26;
+    --bg-cards: #1c3139;
+    --bg-cards-cont: #0E1C26;
+    --btn-play: #00652b;
+    --btn-play-hov: #007621;
+    --btn-border: #2a454b;
+    --text-h1: #7a7a7a;
     --text-titles: white;
     --text-p: white;
 }

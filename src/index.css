@@ -11,23 +11,25 @@ body {
 
 /* Bootstrap navbar edition */
 .bg-dark {
-  background-color: var(--bg-two) !important;
+  background-color: var(--bg-navbar) !important;
+  border-bottom: 1px solid var(--btn-border);
 }
 
 h1 {
-  color: var(--bg-four)
+  color: var(--text-h1);
+  text-align: center;
 }
 
 h2 {
   color: var(--text-h1)
 }
 
-.p-height p {
-  margin-bottom: 1.3rem;
+img {
+  background-color: #172A32;
 }
 
-.card button {
-  background-color: red;
+.p-height p {
+  margin-bottom: 1.3rem;
 }
 
 .pagination-cont {

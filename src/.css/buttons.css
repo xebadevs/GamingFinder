@@ -1,18 +1,19 @@
 .btn-search, .btn-search {
-    border: 1px solid var(--bg-third);
-    background-color: var(--bg-third);
+    border: 1px solid var(--btn-border);
+    background-color: var(--bg-main);
     color: var(--text-p);
 }
 
 .btn-search:hover, .btn-search:focus {
-    background-color: var(--bg-main);
+    background-color: #2a454b;
     color: whitesmoke;
 }
 
 .btn-play {
-    background-color: var(--bg-four);
+    background-color: var(--btn-play);
 }
 
 .btn-play:hover, .btn-play:focus {
-    background-color: var(--bg-three);
+    background-color: var(--btn-play-hov);
+    color: whitesmoke;
 }

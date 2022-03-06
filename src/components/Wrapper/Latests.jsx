@@ -45,7 +45,8 @@ useEffect(() => {
 
   return (
     <div>
-      <h1>Latests Component</h1>
+      <h1>Latests Games</h1>
+    {loading === false &&
       <div className='card-container'>
         {currentPosts.map(posts => (
             <div className="card card-gap" key={posts.id} onClick={() => navigate('/game/' + posts.id)}>
@@ -62,6 +63,7 @@ useEffect(() => {
         </div>
         ))}
       </div>
+        }
     </div>
   )
 }

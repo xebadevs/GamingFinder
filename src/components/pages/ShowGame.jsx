@@ -52,7 +52,6 @@ console.log(requirements)
           <Navbar />
 
           <div>
-          {loading && <h2>Loading...</h2>}
           </div>
 
           <div className="single-game-cont mt-5 mb-5">
@@ -81,21 +80,23 @@ console.log(requirements)
               <div>
                 <hr />
                 <h1>Description</h1>
+                {loading && <h2>Loading...</h2>}
                 <p className="description m-4">{posts.description}</p>
             </div>
 
             <div>
             <hr />
               <h1>Screenshots</h1>
+              {loading && <h2>Loading...</h2>}
               <div className="screenshot-container">
                   <div className="screenshot col-md-2 mt-3">
-                      <img src={image1} alt="" className="screenshot col-md-2" />
+                      <img src={image1} className="screenshot col-md-2" />
                   </div>
                   <div className="screenshot col-md-2 mt-3">
-                    <img src={image2} alt="" className="screenshot col-md-2" />
+                    <img src={image2} className="screenshot col-md-2" />
                   </div>
                   <div className="screenshot col-md-2 mt-3">
-                    <img src={image3} alt="" className="screenshot col-md-2" />
+                    <img src={image3} className="screenshot col-md-2" />
                   </div>
               </div>
             </div>

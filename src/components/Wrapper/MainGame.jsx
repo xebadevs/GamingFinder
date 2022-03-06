@@ -31,20 +31,24 @@ export default function MainGame({ id }) {
   }, [])
 
   return (
-    <div className="maingame-cont">
+    <div>
       <div>
-        {loading && <h2>Loading...</h2>}
+        {loading && <h2 className="main-loading">Loading...</h2>}
       </div>
-      <div className="card main-card" onClick={() => navigate('/game/' + posts.id)}>
-        <img src={posts.thumbnail} className="card-img-top" alt="..." />
-        <div className="card-body card-content">
-          <h5 className="card-title"> {posts.title} </h5>
-          <p className="card-text"> {posts.short_description} </p>
-          <div>
-            <a href={posts.game_url} target="_blank" className="btn btn-play">Play for Free!</a>
+      {loading === false &&
+      <div className="main-card m-3">
+        <div className="card main-card" onClick={() => navigate('/game/' + posts.id)}>
+          <img src={posts.thumbnail} className="card-img-top" />
+          <div className="card-body card-content">
+            <h5 className="card-title"> {posts.title} </h5>
+            <p className="card-text"> {posts.short_description} </p>
+            <div>
+              <a href={posts.game_url} target="_blank" className="btn btn-play">Play for Free!</a>
+            </div>
           </div>
         </div>
       </div>
+      }
     </div>
   )
 }

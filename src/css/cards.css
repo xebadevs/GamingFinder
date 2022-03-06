@@ -1,17 +1,25 @@
 /* -------------------- ALL CARDS -------------------- */
 .card {
-    background-color: var(--bg-two);
+    background-color: var(--bg-cards);
     color: var(--text-p)
 }
 
 /* -------------------- VARIOUS GAMES -------------------- */
-.card-container {
+.card-container,
+.card-container-main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     place-items: center;
     /* grid-auto-rows: 320px; */
     gap: 15px;
     margin: 15px;
+}
+
+.card-container-main {
+    width: 90%;
+    margin: auto;
+    border-radius: 3px;
+    padding: 20px;
 }
 
 .card-gap {
@@ -59,6 +67,10 @@
 
 /* -------------------- MAIN GAME -------------------- */
 
+.card-container-main {
+    background-color: var(--bg-cards-cont);
+}
+
 .main-card, .maingame-cont {
     max-width: 430px;
     min-height: 470px;
@@ -75,4 +87,10 @@
 
 .card-content a {
     width: 150px;
+}
+
+.main-loading {
+    display: grid;
+    place-items: center;
+    height: 470px;
 }

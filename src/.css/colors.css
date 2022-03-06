@@ -3,10 +3,13 @@
     --bg-navbar: #0e1c26;
     --bg-cards: #1c3139;
     --bg-cards-cont: #0E1C26;
-    --btn-play: #00652b;
-    --btn-play-hov: #007621;
+    --bg-cards-cont-2: #13232C;
+    --btn-play: #0077b6;
+    --btn-play-hov: #0096c7;
     --btn-border: #2a454b;
     --text-h1: #7a7a7a;
     --text-titles: white;
-    --text-p: white;
+    --text-p: rgb(218, 216, 216);
+    --text-button: white;
+    --pag-hov: rgb(218, 216, 216);
 }

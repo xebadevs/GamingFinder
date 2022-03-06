@@ -69,12 +69,17 @@
 
 .card-container-main {
     background-color: var(--bg-cards-cont);
+    border-radius: 5px;
 }
 
 .main-card, .maingame-cont {
     max-width: 430px;
-    min-height: 470px;
+    min-height: 490px;
     cursor: pointer;
+}
+
+.card-title {
+    font-size: 1.4rem;
 }
 
 .card-content {

@@ -46,6 +46,7 @@ useEffect(() => {
   return (
     <div>
       <h1>LATESTS GAMES</h1>
+      <hr className='hr-main' />
     {loading === false &&
       <div className='card-container'>
         {currentPosts.map(posts => (

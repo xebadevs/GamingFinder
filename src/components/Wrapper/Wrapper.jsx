@@ -6,9 +6,7 @@ export default function Wrapper(){
 
     return(
         <div>
-            <div className='my-5'>
-                <MostPlayed />
-            </div>
+            <MostPlayed />
             <Latest />
             <Recommended />
         </div>

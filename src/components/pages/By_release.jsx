@@ -48,10 +48,10 @@ useEffect(() => {
       <Navbar />
 
       <div>
-        {loading && <h2>Loading...</h2>}
       </div>
 
-      <h1>By_release component</h1>
+      <h1 className='mt-5'>GAMES BY RELEASE</h1>
+      {loading && <h2>Loading...</h2>}
       <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
 
         <div className='card-container'>

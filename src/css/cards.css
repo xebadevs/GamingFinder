@@ -1,7 +1,8 @@
 /* -------------------- ALL CARDS -------------------- */
 .card {
     background-color: var(--bg-cards);
-    color: var(--text-p)
+    color: var(--text-p);
+    box-shadow: var(--shadow-two);
 }
 
 /* -------------------- VARIOUS GAMES -------------------- */
@@ -44,8 +45,12 @@
 
 .single-game-cont h1 {
     text-align: center;
+    
 }
-
+.p-height p {
+    margin-bottom: 1.3rem;
+}
+    
 .single-game-cont .description {
     text-align: justify;
 }
@@ -64,18 +69,27 @@
     border-radius: 5px;
 }
 
+.img-fluid {
+    box-shadow: var(--shadow-two)
+}
+
+.screenshot {
+    box-shadow: var(--shadow-two);
+}
+
 
 /* -------------------- MAIN GAME -------------------- */
-
 .card-container-main {
     background-color: var(--bg-cards-cont);
     border-radius: 5px;
+    box-shadow: var(--shadow-one);
 }
 
 .main-card, .maingame-cont {
     max-width: 430px;
     min-height: 490px;
     cursor: pointer;
+    box-shadow: var(--shadow-two);
 }
 
 .card-title {
@@ -98,4 +112,10 @@
     display: grid;
     place-items: center;
     height: 470px;
+}
+
+.hr-main {
+    color: var(--text-h1);
+    max-width: 40%;
+    margin: 0 auto 30px auto;
 }

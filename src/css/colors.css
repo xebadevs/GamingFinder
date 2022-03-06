@@ -12,4 +12,7 @@
     --text-p: rgb(218, 216, 216);
     --text-button: white;
     --pag-hov: rgb(218, 216, 216);
+    --shadow-one: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --shadow-two: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --shadow-light: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }

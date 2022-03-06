@@ -50,10 +50,6 @@ console.log(requirements)
     return (
       <div>
           <Navbar />
-
-          <div>
-          </div>
-
           <div className="single-game-cont mt-5 mb-5">
           <div className="card col-md-8">
             <div className="row g-6">

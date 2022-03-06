@@ -1,0 +1,80 @@
+/* -------------------- Main elements -------------------- */
+
+h1 {
+    color: var(--text-h1);
+    text-align: center;
+}
+  
+h2 {
+color: var(--text-h1)
+}
+
+p {
+color: var(--text-p);
+}
+
+img {
+background-color: #172A32;
+}
+
+hr {
+color: var(--bg-navbar);
+border: 1px solid var(--bg-navbar);
+}
+
+/* -------------------- Bootstrap navbar edition -------------------- */
+.bg-dark {
+background-color: var(--bg-navbar) !important;
+border-bottom: 1px solid var(--btn-border);
+height: 70px;
+box-shadow: var(--shadow-light);
+}
+
+.bg-dark li {
+margin: 0 20px;
+}
+
+.navbar-nav .dropdown-menu {
+background-color: var(--bg-navbar);
+border: 1px solid var(--btn-border);
+}
+
+.dropdown-item {
+color: var(--text-h1);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+background-color: var(--pag-hov);
+border-radius: 3px;
+}
+
+.logo {
+cursor: pointer;
+}
+
+
+/* -------------------- Pagination -------------------- */
+.pagination {
+background-color: transparent;
+margin-top: 20px;
+box-shadow: var(--shadow-two);
+}
+
+.page-link {
+background-color: var(--bg-cards-cont);
+color: var(--text-h1);
+border: 1px solid var(--text-h1);
+}
+
+.page-link:hover,
+.page-link:focus {
+background-color: var(--pag-hov);
+color: var(--bg-cards);
+border: 1px solid var(--text-h1);
+}
+
+.pagination-cont {
+display: grid;
+place-items: center;
+}

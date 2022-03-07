@@ -1,3 +1,0 @@
-# GamingFinder
-
-Project in progress

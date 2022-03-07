@@ -27,7 +27,6 @@ export default function ShowGame() {
         'x-rapidapi-key': 'a747c78b0emshbb6611ca068d29cp19a88ajsnd06816a76109'
       }
           };
-
       axios
       .get(options.url, options)
       .then(res => {

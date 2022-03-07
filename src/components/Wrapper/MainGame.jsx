@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 export default function MainGame({ id }) {
 
   const [posts, setPosts] = useState([])
-  const navigate = useNavigate()
   const [loading, setLoading] = useState(true)
+  const navigate = useNavigate()
 
   
   useEffect(() => {

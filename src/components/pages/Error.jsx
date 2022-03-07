@@ -8,7 +8,6 @@ export default function Error() {
         <Navbar />
         <h1 className='mt-5'>Something went wrong</h1>
         <div class="lds-hourglass"></div>
-        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         <Footer />
     </div>
   )

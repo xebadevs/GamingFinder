@@ -1,22 +1,19 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import logo from '../../assets/logo.ico'
 
 const Navbar = () => {
     const navigate = useNavigate()
     const [search, setSearch] = useState('')
-    const [goAndSearch, setGoAndSearch] = useState(false)
-
-    function searchGame(){
-            console.log(search)
-            setGoAndSearch(true)
-    }
 
     return(
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
                 <a className="navbar-brand" onClick={() => navigate('/main')}>
-                    <span className="logo p-2">LOGO</span>    
+                    <span className="logo">
+                        <img src={logo} alt="" />
+                    </span>    
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

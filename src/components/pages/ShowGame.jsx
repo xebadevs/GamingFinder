@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
+import Footer from "../Footer";
 
 export default function ShowGame() {
 
@@ -51,7 +52,7 @@ console.log(requirements)
       <div>
           <Navbar />
           <div className="single-game-cont mt-5 mb-5">
-          <div className="card col-md-8">
+          <div className="card-game col-md-8">
             <div className="row g-6">
               <div className="col-md-4">
                 <img src={posts.thumbnail} className="img-fluid rounded m-3" />
@@ -76,14 +77,18 @@ console.log(requirements)
               <div>
                 <hr />
                 <h1>Description</h1>
-                {loading && <h2>Loading...</h2>}
+                {loading &&
+                  <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                }
                 <p className="description m-4">{posts.description}</p>
             </div>
 
             <div>
             <hr />
               <h1>Screenshots</h1>
-              {loading && <h2>Loading...</h2>}
+              {loading &&
+                <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+              }
               <div className="screenshot-container">
                   <div className="screenshot col-md-2 mt-3">
                       <img src={image1} className="screenshot col-md-2" />
@@ -126,8 +131,8 @@ console.log(requirements)
           </div>
       </div>
 
-      <br />
+      <Footer />
 
-      </div>
-    )
+    </div>
+  )
 }

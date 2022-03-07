@@ -33,7 +33,6 @@ export default function MainGame({ id }) {
   return (
     <div>
       <div>
-        {/* {loading && <h2>Loading...</h2>} */}
         {loading && 
           <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
           }

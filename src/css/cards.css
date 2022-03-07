@@ -3,6 +3,17 @@
     background-color: var(--bg-cards);
     color: var(--text-p);
     box-shadow: var(--shadow-two);
+    transition: all .4s ease-in-out;
+}
+
+.card-game {
+    background-color: var(--bg-cards);
+    color: var(--text-p);
+}
+
+.card:hover {
+    transform: scale(1.011);
+    box-shadow: var(--shadow-one);
 }
 
 /* -------------------- VARIOUS GAMES -------------------- */
@@ -11,16 +22,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     place-items: center;
-    /* grid-auto-rows: 320px; */
     gap: 15px;
     margin: 15px;
-}
-
-.card-container-main {
-    width: 90%;
-    margin: auto;
-    border-radius: 3px;
-    padding: 20px;
 }
 
 .card-gap {
@@ -28,6 +31,11 @@
     height: 320px;
     margin: 15px;
     cursor: pointer;
+}
+
+.card-gap:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-one);
 }
 
 .card p {
@@ -55,6 +63,15 @@
     text-align: justify;
 }
 
+.img-fluid {
+    transition: all .4s ease-in-out;
+}
+
+.img-fluid:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-one);
+}
+
 .screenshot-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -67,6 +84,12 @@
     width: 300px;
     height: 200px;
     border-radius: 5px;
+    transition: all .4s ease-in-out;
+}
+
+.screenshot:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-one);
 }
 
 .img-fluid {
@@ -80,12 +103,16 @@
 
 /* -------------------- MAIN GAME -------------------- */
 .card-container-main {
-    background-color: var(--bg-cards-cont);
+    width: 90%;
+    margin: auto;
     border-radius: 5px;
+    padding: 20px;
+    background-color: var(--bg-cards-cont);
     box-shadow: var(--shadow-one);
 }
 
-.main-card, .maingame-cont {
+.main-card,
+.maingame-cont {
     max-width: 430px;
     min-height: 490px;
     cursor: pointer;

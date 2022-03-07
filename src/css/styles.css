@@ -25,6 +25,7 @@ color: var(--bg-navbar);
 border: 1px solid var(--bg-navbar);
 }
 
+
 /* -------------------- Home -------------------- */
 .bg-img {
     display: flex;
@@ -95,6 +96,7 @@ border: 1px solid var(--bg-navbar);
      50% { opacity: 0.0; }
     100% { opacity: 1.0; }
 }
+
 
 /* -------------------- Bootstrap navbar edition -------------------- */
 .navbar {
@@ -168,6 +170,18 @@ border: 1px solid var(--text-h1);
 .pagination-cont {
 display: grid;
 place-items: center;
+}
+
+
+/* -------------------- Pagination -------------------- */
+.error-img-cont {
+    display: flex;
+    width: 100%;
+}
+
+.error-img-cont img {
+    margin: auto;
+    width: 250px;
 }
 
 /* -------------------- Footer -------------------- */

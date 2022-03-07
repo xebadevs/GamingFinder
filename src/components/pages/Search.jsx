@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import axios from "axios";
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../Footer';
 
 export default function By_Release({search}) {
 
@@ -45,7 +46,7 @@ export default function By_Release({search}) {
     console.log(posts)
 
   return (
-    <div>
+    <div className='search-cont'>
         <Navbar />
         <h1 className='mt-5'><i>Results for:</i>
             <hr className='hr-main' />
@@ -70,6 +71,7 @@ export default function By_Release({search}) {
                 </div>
             ))}
         </div>
+        <Footer />
     </div>
     )
 }

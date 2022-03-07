@@ -45,12 +45,14 @@ export default function ShowGames({endpoint, tag, platform, sort, title}) {
 
 
     return (
-        <div>
+        <div className='games-cont'>
         {gameId === null &&
             <div>
                 <h1 className='mt-5'>{title} GAMES</h1>
                 <hr className='hr-main' />
-                {loading && <h2>Loading...</h2>}
+                {loading &&
+                <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                }
                   <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
                 <div className='card-container'>
                     {currentPosts.map(posts => (

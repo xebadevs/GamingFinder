@@ -33,7 +33,10 @@ export default function MainGame({ id }) {
   return (
     <div>
       <div>
-        {loading && <h2 className="main-loading">Loading...</h2>}
+        {/* {loading && <h2>Loading...</h2>} */}
+        {loading && 
+          <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+          }
       </div>
       {loading === false &&
       <div className="main-card m-3">

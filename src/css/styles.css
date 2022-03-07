@@ -25,7 +25,7 @@ border: 1px solid var(--bg-navbar);
 .bg-dark {
 background-color: var(--bg-navbar) !important;
 border-bottom: 1px solid var(--btn-border);
-height: 70px;
+height: 7vh;
 box-shadow: var(--shadow-light);
 }
 
@@ -79,15 +79,20 @@ place-items: center;
 }
 
 /* -------------------- Footer -------------------- */
-.error-cont {
+.error-cont,
+.search-cont {
     min-height: 92.8vh;
+}
+
+.games-cont {
+    min-height: 80.8vh;
 }
 
 /* -------------------- Footer -------------------- */
 .footer {
     display: grid;
     place-items: center;
-    height: 70px;
+    height: 7vh;
     background-color: var(--bg-navbar);
     border-top: 1px solid var(--btn-border);
     position: absolute;
@@ -97,9 +102,9 @@ place-items: center;
 
 .footer a {
     text-decoration: none;
-    color: var(--btn-play);
+    color: var(--text-h1);
 }
 
 .footer a:hover {
-    color: var(--btn-play-hov);
+    color: var(--btn-play);
 }

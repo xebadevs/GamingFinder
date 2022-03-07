@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import logo from '../../assets/logo.ico'
+import invader from '../../assets/invader-logo.png'
 
 const Navbar = () => {
     const navigate = useNavigate()
@@ -12,7 +12,7 @@ const Navbar = () => {
                 <div className="container-fluid">
                 <a className="navbar-brand" onClick={() => navigate('/main')}>
                     <span className="logo">
-                        <img src={logo} alt="" />
+                        <img src={invader} className='inv-logo' />
                     </span>    
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

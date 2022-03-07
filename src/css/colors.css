@@ -15,4 +15,6 @@
     --shadow-one: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     --shadow-two: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     --shadow-light: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    --bg-bg: rgb(23,42,50);
+    --bg-gradient: linear-gradient(90deg, rgba(23,42,50,1) 0%, rgba(18,31,36,0.8491771708683473) 50%, rgba(23,42,50,1) 100%);
 }

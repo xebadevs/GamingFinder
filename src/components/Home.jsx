@@ -26,7 +26,7 @@ function Play(){
                     <h3 className='home-subtitle'>All the Free PC Games on the Web</h3>
                 </div>
                 <div className='img-cont mb-5'>
-                    <img src={invader} className='invader' />
+                    <img src={invader} className='invader' alt=''/>
                 </div>
                 <div className='btn-main mt-5'>
                     <button className="btn btn-outline-secondary blink" onClick={Play}>PRESS START</button>

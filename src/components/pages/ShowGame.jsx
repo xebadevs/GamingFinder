@@ -8,7 +8,6 @@ export default function ShowGame() {
 
     const [loading, setLoading] = useState(true)
     const [posts, setPosts] = useState([])
-    const [screenshots, setScreenshots] = useState([])
     const [image1, setImage1] = useState('')
     const [image3, setImage2] = useState('')
     const [image2, setImage3] = useState('')
@@ -16,24 +15,23 @@ export default function ShowGame() {
     const navigate = useNavigate()
     const { id } = useParams()
 
-console.log(requirements)
 
-    let options = {
-        method: 'GET',
-        url: 'https://free-to-play-games-database.p.rapidapi.com/api/game',
-        params: {id: id},
-        headers: {
-            'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
-            'x-rapidapi-key': 'a747c78b0emshbb6611ca068d29cp19a88ajsnd06816a76109'
-            }
-        };
-
+    
     useEffect(() => {
+      let options = {
+      method: 'GET',
+      url: 'https://free-to-play-games-database.p.rapidapi.com/api/game',
+      params: {id: id},
+      headers: {
+        'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
+        'x-rapidapi-key': 'a747c78b0emshbb6611ca068d29cp19a88ajsnd06816a76109'
+      }
+          };
+
       axios
       .get(options.url, options)
       .then(res => {
           setPosts(res.data)
-          setScreenshots(res.data.screenshots)
           setRequirements(res.data.minimum_system_requirements)
           window.scrollTo(0, 0)
           setImage1(res.data.screenshots[0].image)
@@ -55,7 +53,7 @@ console.log(requirements)
           <div className="card-game col-md-8">
             <div className="row g-6">
               <div className="col-md-4">
-                <img src={posts.thumbnail} className="img-fluid rounded m-3" />
+                <img src={posts.thumbnail} className="img-fluid rounded m-3" alt="" />
               </div>
               <div className="col-md-4">
                 <div className="card-body mt-4 p-height">
@@ -70,7 +68,7 @@ console.log(requirements)
                   <p>Publisher: {posts.publisher}</p>
                   <p>Developer: {posts.developer}</p>
                   <br />
-                  <a href={posts.game_url} target="_blank" className="btn btn-play">Play it Free!</a>
+                  <a href={posts.game_url} target="_blank" rel="noreferrer" className="btn btn-play">Play it Free!</a>
                 </div>
               </div>
 
@@ -91,18 +89,18 @@ console.log(requirements)
               }
               <div className="screenshot-container">
                   <div className="screenshot col-md-2 mt-3">
-                      <img src={image1} className="screenshot col-md-2" />
+                      <img src={image1} className="screenshot col-md-2" alt=""/>
                   </div>
                   <div className="screenshot col-md-2 mt-3">
-                    <img src={image2} className="screenshot col-md-2" />
+                    <img src={image2} className="screenshot col-md-2" alt=""/>
                   </div>
                   <div className="screenshot col-md-2 mt-3">
-                    <img src={image3} className="screenshot col-md-2" />
+                    <img src={image3} className="screenshot col-md-2" alt=""/>
                   </div>
               </div>
             </div>
 
-            {requirements != undefined &&
+            {requirements !== undefined &&
             <div>
             <hr />
               <h1>System Requirements</h1>

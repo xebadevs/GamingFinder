@@ -12,7 +12,7 @@ export default function ShowGames({endpoint, tag, platform, sort, title}) {
     const [loading, setLoading] = useState(true)
     const [currentPage, setCurrentPage] = useState(1)
     const [postsPerPage] = useState(50)
-    const [gameId, setGameId] = useState(null)
+    const [gameId]= useState(null)
 
       // Get current posts
     const indexOfLastPost = currentPage * postsPerPage
@@ -21,17 +21,18 @@ export default function ShowGames({endpoint, tag, platform, sort, title}) {
     // Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
-    let options = {
-        method: 'GET',
-        url: 'https://free-to-play-games-database.p.rapidapi.com/api/' + endpoint,
-        params: {'sort-by': sort, tag: tag, platform: platform},
-        headers: {
-            'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
-            'x-rapidapi-key': 'a747c78b0emshbb6611ca068d29cp19a88ajsnd06816a76109'
-            }
-        }; 
-
+    
     useEffect(() => {
+        let options = {
+            method: 'GET',
+            url: 'https://free-to-play-games-database.p.rapidapi.com/api/' + endpoint,
+            params: {'sort-by': sort, tag: tag, platform: platform},
+            headers: {
+                'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
+                'x-rapidapi-key': 'a747c78b0emshbb6611ca068d29cp19a88ajsnd06816a76109'
+                }
+            };
+
         axios
             .get(options.url, options)
             .then(res => {
@@ -57,7 +58,7 @@ export default function ShowGames({endpoint, tag, platform, sort, title}) {
                 <div className='card-container'>
                     {currentPosts.map(posts => (
                         <div className="card card-gap" key={posts.id} onClick={() => navigate('/game/' + posts.id)}>
-                            <img src={posts.thumbnail} className="card-img-top"></img>
+                            <img src={posts.thumbnail} className="card-img-top" alt=''></img>
                             <div className='card-body'>
                                 <h4 className='card-title' key={posts.id}>
                                     {posts.title}

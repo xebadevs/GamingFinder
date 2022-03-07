@@ -3,7 +3,7 @@ import Navbar from '../Navbar/Navbar'
 import ShowGames from './ShowGames'
 
 
-export default function Web_browser() {
+export default function WebBrowser() {
   return (
     <div>
         <Navbar />

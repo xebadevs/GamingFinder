@@ -8,17 +8,17 @@ export default function MainGame({ id }) {
   const navigate = useNavigate()
   const [loading, setLoading] = useState(true)
 
-  let options = {
-      method: 'GET',
-      url: 'https://free-to-play-games-database.p.rapidapi.com/api/game',
-      params: {id: id},
-      headers: {
-          'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
-          'x-rapidapi-key': 'a747c78b0emshbb6611ca068d29cp19a88ajsnd06816a76109'
-          }
-      };
-
+  
   useEffect(() => {
+    let options = {
+        method: 'GET',
+        url: 'https://free-to-play-games-database.p.rapidapi.com/api/game',
+        params: {id: id},
+        headers: {
+            'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
+            'x-rapidapi-key': 'a747c78b0emshbb6611ca068d29cp19a88ajsnd06816a76109'
+            }
+        };
       axios
           .get(options.url, options)
           .then(res => {
@@ -40,12 +40,12 @@ export default function MainGame({ id }) {
       {loading === false &&
       <div className="main-card m-3">
         <div className="card main-card" onClick={() => navigate('/game/' + posts.id)}>
-          <img src={posts.thumbnail} className="card-img-top" />
+          <img src={posts.thumbnail} className="card-img-top" alt=""/>
           <div className="card-body card-content">
             <h5 className="card-title"> {posts.title} </h5>
             <p className="card-text"> {posts.short_description} </p>
             <div>
-              <a href={posts.game_url} target="_blank" className="btn btn-play">
+              <a href={posts.game_url} target="_blank" rel="noreferrer" className="btn btn-play">
                   Play for free!
               </a>
             </div>

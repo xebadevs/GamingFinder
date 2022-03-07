@@ -10,11 +10,11 @@ const Navbar = () => {
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
-                <a href="#" className="navbar-brand" onClick={() => navigate('/main')}>
+                <button className="btn navbar-brand" onClick={() => navigate('/main')}>
                     <span className="logo">
-                        <img src={invader} className='inv-logo' />
+                        <img src={invader} className='inv-logo' alt="" />
                     </span>    
-                </a>
+                </button>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -22,36 +22,36 @@ const Navbar = () => {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     
                     <li className="nav-item">
-                        <a href="#" className="nav-link" id="navbarDropdown" role="button" onClick={() => navigate('/by_release')}>
+                        <button className="btn nav-link" id="navbarDropdown" onClick={() => navigate('/by_release')}>
                         by release
-                        </a>
+                        </button>
                     </li>
 
                     <li className="nav-item dropdown">
-                        <a href="#" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button className="btn nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         by genre
-                        </a>
+                        </button>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a href="#" className="dropdown-item" onClick={() => navigate('/mmo')}>MMO</a></li>
-                        <li><a href="#" className="dropdown-item" onClick={() => navigate('/mmorpg')}>MMORPG</a></li>
-                        <li><a href="#" className="dropdown-item" onClick={() => navigate('/shooter')}>Shooter</a></li>
-                        <li><a href="#" className="dropdown-item" onClick={() => navigate('/strategy')}>Strategy</a></li>
-                        <li><a href="#" className="dropdown-item" onClick={() => navigate('/moba')}>Moba</a></li>
-                        <li><a href="#" className="dropdown-item" onClick={() => navigate('/card_games')}>Card Games</a></li>
-                        <li><a href="#" className="dropdown-item" onClick={() => navigate('/racing')}>Racing</a></li>
-                        <li><a href="#" className="dropdown-item" onClick={() => navigate('/sports')}>Sports</a></li>
-                        <li><a href="#" className="dropdown-item" onClick={() => navigate('/social')}>Social</a></li>
-                        <li><a href="#" className="dropdown-item" onClick={() => navigate('/fighting')}>Fighting</a></li>
+                        <li><button className="dropdown-item" onClick={() => navigate('/mmo')}>MMO</button></li>
+                        <li><button className="dropdown-item" onClick={() => navigate('/mmorpg')}>MMORPG</button></li>
+                        <li><button className="dropdown-item" onClick={() => navigate('/shooter')}>Shooter</button></li>
+                        <li><button className="dropdown-item" onClick={() => navigate('/strategy')}>Strategy</button></li>
+                        <li><button className="dropdown-item" onClick={() => navigate('/moba')}>Moba</button></li>
+                        <li><button className="dropdown-item" onClick={() => navigate('/card_games')}>Card Games</button></li>
+                        <li><button className="dropdown-item" onClick={() => navigate('/racing')}>Racing</button></li>
+                        <li><button className="dropdown-item" onClick={() => navigate('/sports')}>Sports</button></li>
+                        <li><button className="dropdown-item" onClick={() => navigate('/social')}>Social</button></li>
+                        <li><button className="dropdown-item" onClick={() => navigate('/fighting')}>Fighting</button></li>
                         </ul>
                     </li>
                     
                     <li className="nav-item dropdown">
-                        <a href="#" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button className="btn nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         by platform
-                        </a>
+                        </button>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a href="#" className="dropdown-item" onClick={() => navigate('/pc')}>PC</a></li>
-                        <li><a href="#" className="dropdown-item" onClick={() => navigate('/web_browser')}>Web Browser</a></li>
+                        <li><button className="btn dropdown-item" onClick={() => navigate('/pc')}>PC</button></li>
+                        <li><button className="btn dropdown-item" onClick={() => navigate('/web_browser')}>Web Browser</button></li>
                         </ul>
                     </li>
                     </ul>

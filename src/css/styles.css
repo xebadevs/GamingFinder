@@ -154,14 +154,14 @@ margin-top: 10px;
 box-shadow: var(--shadow-two);
 }
 
-.page-link {
+button.page-link {
 background-color: var(--bg-cards-cont);
 color: var(--text-h1);
 border: 1px solid var(--text-h1);
 }
 
-.page-link:hover,
-.page-link:focus {
+button.page-link:hover,
+button.page-link:focus {
 background-color: var(--pag-hov);
 color: var(--bg-cards);
 border: 1px solid var(--text-h1);

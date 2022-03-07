@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div className='mt-4'>
         <div className="footer">
-            <a href="https://www.linkedin.com/in/sebastianlondero/" target='_blank'>
+            <a href="https://www.linkedin.com/in/sebastianlondero/" target='_blank' rel='noreferrer'>
                 &copy; SEBASTIÁN LONDERO 2022
             </a>
         </div>

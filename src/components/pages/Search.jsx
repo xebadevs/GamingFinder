@@ -47,7 +47,12 @@ export default function By_Release({search}) {
   return (
     <div>
         <Navbar />
-        <h1><i>Results for:</i> {game}</h1>
+        <h1 className='mt-5'><i>Results for:</i>
+            <hr className='hr-main' />
+            <p>
+                {game}
+            </p>
+        </h1>
 
         <div className='card-container'>
             {posts.filter(post => post.title.includes(filter_search)).map(posts => (

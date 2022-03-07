@@ -1,5 +1,6 @@
 @import url(./css/styles.css);
 @import url(./css/colors.css);
+@import url(./css/typography.css);
 @import url(./css/cards.css);
 @import url(./css/buttons.css);
 
@@ -8,4 +9,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: var(--bg-main);
+  position: relative;
+  padding-bottom: 70px;
 }

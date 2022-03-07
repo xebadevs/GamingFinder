@@ -79,13 +79,20 @@ place-items: center;
 }
 
 /* -------------------- Footer -------------------- */
+.error-cont {
+    min-height: 92.8vh;
+}
+
+/* -------------------- Footer -------------------- */
 .footer {
     display: grid;
     place-items: center;
     height: 70px;
     background-color: var(--bg-navbar);
     border-top: 1px solid var(--btn-border);
-    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer a {

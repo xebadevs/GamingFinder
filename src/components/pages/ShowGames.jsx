@@ -3,9 +3,9 @@ import axios from "axios";
 import Pagination from '../Pagination';
 import { useNavigate } from "react-router-dom";
 import ShowGame from './ShowGame';
+import Footer from '../Footer';
 
-
-export default function ShowGames({endpoint, tag, platform, title}) {
+export default function ShowGames({endpoint, tag, platform, sort, title}) {
 
     const navigate = useNavigate()
     const [posts, setPosts] = useState([])
@@ -24,7 +24,7 @@ export default function ShowGames({endpoint, tag, platform, title}) {
     let options = {
         method: 'GET',
         url: 'https://free-to-play-games-database.p.rapidapi.com/api/' + endpoint,
-        params: {tag: tag, platform: platform},
+        params: {'sort-by': sort, tag: tag, platform: platform},
         headers: {
             'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
             'x-rapidapi-key': 'a747c78b0emshbb6611ca068d29cp19a88ajsnd06816a76109'
@@ -65,11 +65,11 @@ export default function ShowGames({endpoint, tag, platform, title}) {
                             </div>
                         </div>
                     ))}
-                </div>
-                <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
-                </div>
-                }
-        
+            </div>
+            <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
+            </div>
+            }
+            <Footer />
         {gameId != null && <ShowGame />}
   
         </div>

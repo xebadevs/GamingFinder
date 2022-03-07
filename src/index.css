@@ -4,6 +4,7 @@
 @import url(./css/cards.css);
 @import url(./css/buttons.css);
 @import url(./css/spinner.css);
+@import url(./css/mediaqueries.css);
 
 body {
   margin: 0;
@@ -11,5 +12,4 @@ body {
   box-sizing: border-box;
   background-color: var(--bg-main);
   position: relative;
-  padding-bottom: 70px;
 }

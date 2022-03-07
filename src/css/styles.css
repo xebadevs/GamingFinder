@@ -5,7 +5,11 @@ h1 {
 }
   
 h2 {
-color: var(--text-h1)
+    color: var(--text-h1)
+}
+
+h3 {
+    color: var(--text-h1);
 }
 
 p {
@@ -21,7 +25,82 @@ color: var(--bg-navbar);
 border: 1px solid var(--bg-navbar);
 }
 
+/* -------------------- Home -------------------- */
+.bg-img {
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background: rgb(22,49,69);
+    background: radial-gradient(circle, rgba(22,49,69,0.6334908963585435) 0%, rgba(0,0,0,1) 50%, rgba(22,49,69,1) 100%);
+}
+
+.main-cont {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.title-main {
+    font-size: 3rem;
+}
+
+.img-cont {
+    display: flex;
+    top: 35%;
+    justify-content: center;
+    width: 100%;
+}
+
+.invader {
+    align-items: center;
+    background-color: transparent;
+    width: 350px;
+}
+
+.btn-main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 70%;
+}
+
+.blink {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+    -webkit-animation-name:blink;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  @-moz-keyframes blink{  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @-webkit-keyframes blink {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+  }
+  
+  @keyframes blink {  
+    0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
 /* -------------------- Bootstrap navbar edition -------------------- */
+.navbar {
+    z-index: 10;
+}
+
 .bg-dark {
 background-color: var(--bg-navbar) !important;
 border-bottom: 1px solid var(--btn-border);
@@ -48,9 +127,20 @@ background-color: var(--pag-hov);
 border-radius: 3px;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+    background-color: var(--bg-navbar);
+    padding-left: 10px;
+    z-index: 99;
+}
+
+.navbar>.container-fluid {
+    background-color: var(--bg-navbar);
+}
+
 .logo {
-cursor: pointer;
-padding-left: 20px;
+    cursor: pointer;
+    padding-left: 20px;
+    background-color: transparent;
 }
 
 
@@ -80,23 +170,22 @@ place-items: center;
 }
 
 /* -------------------- Footer -------------------- */
+.games-cont {
+    min-height: 100vh;
+}
+
 .error-cont,
 .search-cont {
-    min-height: 92.8vh;
+    min-height: 90.5vh;
 }
 
-.games-cont {
-    min-height: 80.8vh;
-}
-
-/* -------------------- Footer -------------------- */
 .footer {
     display: grid;
     place-items: center;
     height: 7vh;
     background-color: var(--bg-navbar);
     border-top: 1px solid var(--btn-border);
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     width: 100%;
 }

@@ -6,7 +6,9 @@ export default function Strategy() {
   return (
     <div>
         <Navbar />
+        <div>
         <ShowGames endpoint='filter' tag='strategy' title='STRATEGY' />
+        </div>
     </div>
   )
 }

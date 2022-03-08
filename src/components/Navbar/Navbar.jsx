@@ -11,9 +11,9 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
                 <button className="btn navbar-brand" onClick={() => navigate('/main')}>
-                    <span className="logo">
+                    <div className="logo">
                         <img src={invader} className='inv-logo' alt="" />
-                    </span>    
+                    </div>    
                 </button>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

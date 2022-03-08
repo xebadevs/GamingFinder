@@ -139,11 +139,22 @@ border-radius: 3px;
     background-color: var(--bg-navbar);
 }
 
+.logo {
+    width: 65px;
+}
+
 .inv-logo {
     cursor: pointer;
-    padding-left: 10px;
+    padding: 0 5px;
     background-color: transparent;
-    width: 60px;
+    width: 58px;
+    transition: all .4s ease-in-out;
+}
+
+.inv-logo:focus,
+.inv-logo:hover {
+    transform: scale(1.02);
+    transform: rotate(-0.05turn);
 }
 
 

@@ -42,7 +42,7 @@ export default function ShowGame() {
         console.log(err)
         navigate('./error')
       })
-    }, [])
+    }, [id, navigate])
 
 
     return (

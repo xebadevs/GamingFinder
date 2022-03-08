@@ -55,5 +55,17 @@
     "webpack": "^5.69.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
-  }
+  },
+  "description": "React project in progress",
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xebadevs/gamingfinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xebadevs/gamingfinder/issues"
+  },
+  "homepage": "https://github.com/xebadevs/gamingfinder#readme"
 }

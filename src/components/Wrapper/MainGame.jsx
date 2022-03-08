@@ -28,7 +28,7 @@ export default function MainGame({ id }) {
           .catch(err => {
               console.log(err)
           })
-  }, [])
+  })
 
   return (
     <div>

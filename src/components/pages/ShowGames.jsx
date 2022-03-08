@@ -42,7 +42,7 @@ export default function ShowGames({endpoint, tag, platform, sort, title}) {
             .catch(err => {
                 console.log(err)
             })
-    }, [])
+    })
 
 
     return (

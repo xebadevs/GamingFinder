@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
-import Pagination from '../Pagination';
+import Pagination from './Pagination';
 import { useNavigate } from "react-router-dom";
 import ShowGame from './ShowGame';
-import Footer from '../Footer';
+import Footer from '../Wrapper/Footer';
 
 export default function ShowGames({endpoint, tag, platform, sort, title}) {
 

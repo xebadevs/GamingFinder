@@ -3,10 +3,11 @@ import Navbar from '../Navbar/Navbar';
 import axios from "axios";
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../Footer';
+import Footer from '../Wrapper/Footer';
 
 export default function By_Release({search}) {
 
+    const [loading, setLoading] = useState(true)
     const [posts, setPosts] = useState([])
     const { game } = useParams()
     const navigate = useNavigate()
@@ -30,6 +31,7 @@ export default function By_Release({search}) {
             .get(options.url, options)
             .then(res => {
                 setPosts(res.data)
+                setLoading(false)
                 })
                 .catch(err => {
             console.log(err)
@@ -49,6 +51,9 @@ export default function By_Release({search}) {
         </h1>
 
         <div className='card-container'>
+        {loading &&
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        }
             {posts.filter(post => post.title.includes(filter_search)).map(posts => (
                 <div className="card card-gap" key={posts.id} onClick={() => navigate('/game/' + posts.id)}>
                     <img src={posts.thumbnail} className="card-img-top" alt=''></img>

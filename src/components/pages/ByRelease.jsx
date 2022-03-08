@@ -1,5 +1,5 @@
 import Navbar from '../Navbar/Navbar'
-import ShowGames from './ShowGames'
+import ShowGames from '../handlers/ShowGames'
 
 export default function MMORPG() {
   return (

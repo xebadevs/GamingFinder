@@ -12,7 +12,7 @@
 }
 
 .card:hover {
-    transform: scale(1.011);
+    transform: scale(1.020);
     box-shadow: var(--shadow-one);
 }
 

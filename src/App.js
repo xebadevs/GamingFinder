@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './components/Home'
-import Main from './components/Main'
+import Home from './components/pages/Home'
+import Main from './components/pages/Main'
 import ByRelease from './components/pages/ByRelease';
 import MMO from './components/pages/MMO';
 import MMORPG from './components/pages/MMORPG';
@@ -15,7 +15,7 @@ import Social from './components/pages/Social';
 import Fighting from './components/pages/Fighting';
 import PC from './components/pages/PC';
 import WebBrowser from './components/pages/WebBrowser';
-import ShowGame from './components/pages/ShowGame';
+import ShowGame from './components/handlers/ShowGame';
 import Error from './components/pages/Error';
 import Search from './components/pages/Search'
 

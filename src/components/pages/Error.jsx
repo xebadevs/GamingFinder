@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from '../Footer'
+import Footer from '../Wrapper/Footer'
 import Navbar from '../Navbar/Navbar'
 import error from '../../assets/space-error.png'
 

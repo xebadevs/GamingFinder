@@ -1,8 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useRef } from 'react'
-import invader from '../assets/space-invader.png'
-import start from '../assets/start.mp3'
+import invader from '../../assets/space-invader.png'
+import start from '../../assets/start.mp3'
 
 export default function Home() {
     const navigate = useNavigate()

@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
-import Footer from "../Footer";
+import Footer from "../Wrapper/Footer";
 
 export default function ShowGame() {
 
@@ -42,7 +42,7 @@ export default function ShowGame() {
         console.log(err)
         navigate('./error')
       })
-    }, [id, navigate])
+    }, [])
 
 
     return (

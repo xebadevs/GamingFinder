@@ -23,7 +23,7 @@ function Play(){
             <div className='main-cont'>
                 <div className='mb-5'>
                     <h1 className='home-title mb-3'>GamingFinder</h1>
-                    <h3 className='home-subtitle'>All the Free PC Games on the Web</h3>
+                    <h3 className='home-subtitle'>All the Free Online Games on the Web</h3>
                 </div>
                 <div className='img-cont mb-5'>
                     <img src={invader} className='invader' alt=''/>

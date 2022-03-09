@@ -11,11 +11,9 @@ export default function By_Release({search}) {
     const [posts, setPosts] = useState([])
     const { game } = useParams()
     const navigate = useNavigate()
-
     const lower = game.toLowerCase()
-    const alt_game = lower.charAt(0).toUpperCase() + lower.slice(1)
-
-    let filter_search = alt_game
+    const ucfirst = lower.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
+    let filter_search = ucfirst
     
     
     useEffect(() => {

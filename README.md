@@ -1,3 +1,6 @@
 # GamingFinder 🔎
 
-Recently finished project. In the next days I'll write the documentation.
+## Try it on Netlify (Free Hosting Service)
+
+> https://gamingfinder.netlify.app/
+

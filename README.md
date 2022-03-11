@@ -32,7 +32,10 @@ Extra Tools:
 ## Technical Comments
 I prioritized an orderly arrangement of the components: their location in the various folders, their names and their content.
 
-Also I tried to make the code readable for any user.
+Also I tried to make the code clean and readable for any user.
+
+Regarding the user experience, I looked for a way that the objective of the page was exposed from the first moment and without any room for confusion.
+The `home page` was, in fact, the last page I created.
 
 <br>
 

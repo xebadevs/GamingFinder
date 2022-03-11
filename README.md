@@ -33,3 +33,9 @@ Extra Tools:
 I prioritized an orderly arrangement of the components: their location in the various folders, their names and their content.
 
 Also I tried to make the code readable for any user.
+
+<br>
+
+
+## License
+Distributed under GNU GENERAL PUBLIC LICENSE, Version 3, 29 June 2007. See `LICENSE.txt` for more information.

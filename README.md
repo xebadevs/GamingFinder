@@ -38,6 +38,7 @@ Extra Tools:
 
 ## Technical Comments
 I prioritized an orderly arrangement of the components: their location in the various folders, their names and their content.
+Same thing about the routes on the url.
 
 Also I tried to make the code clean and readable for any user.
 

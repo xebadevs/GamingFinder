@@ -56,7 +56,7 @@ const Navbar = () => {
                     </li>
                     </ul>
                     <form className="d-flex">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" maxLength={18} onChange={e => setSearch(e.target.value)} />
+                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" maxLength={18} autoFocus onChange={e => setSearch(e.target.value)} />
                     <button className="btn btn-search" type="submit" onClick={() => navigate('/search/' + search)}>Search</button>
                     </form>
                 </div>

@@ -52,7 +52,7 @@ export default function By_Release({search}) {
         {loading &&
             <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         }
-            {posts.filter(post => post.title.includes(filter_search)).map(posts => (
+            {posts.filter(post => post.title.toLowerCase().includes(filter_search.toLocaleLowerCase())).map(posts => (
                 <div className="card card-gap" key={posts.id} onClick={() => navigate('/game/' + posts.id)}>
                     <img src={posts.thumbnail} className="card-img-top" alt=''></img>
                     <div className='card-body'>

@@ -31,7 +31,7 @@ Extra Tools:
 
 ## Preview
 
-*Pending at the moment*
+*Mockups on construction (probably after the Platzi-day)*
 
 <br>
 

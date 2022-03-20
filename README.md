@@ -31,7 +31,8 @@ Extra Tools:
 
 ## Preview
 
-*Mockups on construction (probably after the Platzi-day)*
+*On mobile*
+![mockup-iphone](https://user-images.githubusercontent.com/91569646/159144515-dbb4406e-1c22-4bbb-becb-525c5cbef968.jpg)
 
 <br>
 

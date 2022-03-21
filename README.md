@@ -36,6 +36,12 @@ Extra Tools:
 
 <br>
 
+*Game description on Notebook*
+![mockup-macbook](https://user-images.githubusercontent.com/91569646/159197740-73e40f9d-142d-4fe1-bd32-f835f655ce42.jpg)
+
+<br>
+
+
 
 ## Technical Comments
 I prioritized an orderly arrangement of the components: their location in the various folders, their names and their content.

@@ -49,6 +49,11 @@ Extra Tools:
 
 <br>
 
+*Strategy games, Recommended games and Error on Mobile*
+![mockup-iphones](https://user-images.githubusercontent.com/91569646/159197884-7c8106a3-01f7-47ae-93e0-11d5c53b222a.jpg)
+
+<br>
+
 
 ## Technical Comments
 I prioritized an orderly arrangement of the components: their location in the various folders, their names and their content.

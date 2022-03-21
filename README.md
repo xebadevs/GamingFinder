@@ -32,18 +32,22 @@ Extra Tools:
 ## Preview
 
 *Initial Page on Mobile*
+
 ![mockup-iphone](https://user-images.githubusercontent.com/91569646/159144515-dbb4406e-1c22-4bbb-becb-525c5cbef968.jpg)
 
 <br>
 
 *Game description on Notebook*
+
 ![mockup-macbook](https://user-images.githubusercontent.com/91569646/159197740-73e40f9d-142d-4fe1-bd32-f835f655ce42.jpg)
 
 <br>
 
 *Main and Search results on Monitors*
+
 ![mockup-monitors](https://user-images.githubusercontent.com/91569646/159197838-6f8ef602-d3b7-479f-be47-4e537cc2153a.jpg)
 
+<br>
 
 
 ## Technical Comments

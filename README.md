@@ -41,6 +41,9 @@ Extra Tools:
 
 <br>
 
+*Main and Search results on Monitors*
+![mockup-monitors](https://user-images.githubusercontent.com/91569646/159197838-6f8ef602-d3b7-479f-be47-4e537cc2153a.jpg)
+
 
 
 ## Technical Comments

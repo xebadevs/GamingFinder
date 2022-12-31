@@ -9,7 +9,7 @@ export default function Error() {
       <div className='error-cont'>
           <Navbar />
           <h1 className='mt-5'><i>Something went wrong</i></h1>
-          <div class="lds-hourglass"></div>
+          <div className="lds-hourglass"></div>
           <div className='error-img-cont'>
             <img src={error} alt="" />
           </div>

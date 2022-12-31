@@ -75,7 +75,7 @@ export default function ShowGame() {
                 <hr />
                 <h1>Description</h1>
                 {loading &&
-                  <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                  <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 }
                 <p className="description m-4">{posts.description}</p>
             </div>
@@ -84,7 +84,7 @@ export default function ShowGame() {
             <hr />
               <h1>Screenshots</h1>
               {loading &&
-                <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
               }
               <div className="screenshot-container">
                   <div className="screenshot col-md-2 mt-3">

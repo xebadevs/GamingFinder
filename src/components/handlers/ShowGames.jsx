@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import ShowGame from './ShowGame';
 import Footer from '../Wrapper/Footer';
 
-export default function ShowGames({endpoint, tag, platform, sort, title}) {
+export default function ShowGames({category, platform, sort, title}) {
 
     const navigate = useNavigate()
     const [posts, setPosts] = useState([])
@@ -25,11 +25,11 @@ export default function ShowGames({endpoint, tag, platform, sort, title}) {
     useEffect(() => {
         let options = {
             method: 'GET',
-            url: 'https://free-to-play-games-database.p.rapidapi.com/api/' + endpoint,
-            params: {'sort-by': sort, tag: tag, platform: platform},
+            url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
+            params: {'sort-by': sort, platform: platform, category: category},
             headers: {
-                'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
-                'x-rapidapi-key': 'a747c78b0emshbb6611ca068d29cp19a88ajsnd06816a76109'
+                'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com',
+                'X-RapidAPI-Key': 'a747c78b0emshbb6611ca068d29cp19a88ajsnd06816a76109'
                 }
             };
 
@@ -52,7 +52,7 @@ export default function ShowGames({endpoint, tag, platform, sort, title}) {
                 <h1 className='mt-5'>{title} GAMES</h1>
                 <hr className='hr-main' />
                 {loading &&
-                <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 }
                   <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
                 <div className='card-container'>

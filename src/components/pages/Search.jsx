@@ -50,7 +50,7 @@ export default function By_Release({search}) {
 
         <div className='card-container'>
         {loading &&
-            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         }
             {posts.filter(post => post.title.toLowerCase().includes(filter_search.toLocaleLowerCase())).map(posts => (
                 <div className="card card-gap" key={posts.id} onClick={() => navigate('/game/' + posts.id)}>

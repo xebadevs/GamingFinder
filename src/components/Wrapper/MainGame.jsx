@@ -34,7 +34,7 @@ export default function MainGame({ id }) {
     <div>
       <div>
         {loading && 
-          <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+          <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
           }
       </div>
       {loading === false &&

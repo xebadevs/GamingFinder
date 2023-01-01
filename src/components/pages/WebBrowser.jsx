@@ -7,7 +7,7 @@ export default function WebBrowser() {
   return (
     <div>
         <Navbar />
-        <ShowGames endpoint='games' platform='browser' title='WEB BROWSER' />
+        <ShowGames platform='browser' title='WEB BROWSER' />
     </div>
   )
 }

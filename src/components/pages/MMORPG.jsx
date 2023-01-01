@@ -6,7 +6,7 @@ export default function MMORPG() {
   return (
     <div>
       <Navbar />
-      <ShowGames endpoint='filter' tag='mmorpg' title='MMORPG' />
+      <ShowGames category='mmorpg' title='MMORPG' />
     </div>
   )
 }

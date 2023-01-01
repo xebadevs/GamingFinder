@@ -6,7 +6,7 @@ export default function Racing() {
   return (
     <div>
         <Navbar />
-        <ShowGames endpoint='filter' tag='racing' title='RACING' />
+        <ShowGames category='racing' title='RACING' />
     </div>
   )
 }

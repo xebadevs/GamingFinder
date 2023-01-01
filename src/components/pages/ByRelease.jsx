@@ -5,7 +5,7 @@ export default function MMORPG() {
   return (
     <div>
       <Navbar />
-      <ShowGames endpoint='games' title='BY RELEASE' sort='release-date' />
+      <ShowGames title='BY RELEASE' sort='release-date' />
     </div>
   )
 }

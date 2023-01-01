@@ -6,7 +6,7 @@ export default function Shooter() {
   return (
     <div>
         <Navbar />
-        <ShowGames endpoint='filter' tag='shooter' title='SHOOTER' />
+        <ShowGames category='shooter' title='SHOOTER' />
     </div>
   )
 }

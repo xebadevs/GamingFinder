@@ -6,7 +6,7 @@ export default function PC() {
   return (
     <div>
         <Navbar />
-        <ShowGames endpoint='games' platform='pc' title='PC' />
+        <ShowGames platform='pc' title='PC' />
     </div>
   )
 }

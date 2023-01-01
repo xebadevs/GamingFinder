@@ -6,7 +6,7 @@ export default function Social() {
   return (
     <div>
         <Navbar />
-        <ShowGames endpoint='filter' tag='social' title='SOCIAL' />
+        <ShowGames category='social' title='SOCIAL' />
     </div>
   )
 }

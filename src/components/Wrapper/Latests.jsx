@@ -10,13 +10,10 @@ export default function By_release() {
   const navigate = useNavigate()
 
   // Get current posts
-  const indexOfLastPost = 15
+  const indexOfLastPost = 18
   const indexOfFirstPost = 0
 
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
-  // Change page
-
-  
   
   useEffect(() => {
     let options = {

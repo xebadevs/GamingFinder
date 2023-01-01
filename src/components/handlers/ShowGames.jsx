@@ -11,7 +11,7 @@ export default function ShowGames({category, platform, sort, title}) {
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(true)
     const [currentPage, setCurrentPage] = useState(1)
-    const [postsPerPage] = useState(50)
+    const [postsPerPage] = useState(48)
     const [gameId]= useState(null)
 
       // Get current posts

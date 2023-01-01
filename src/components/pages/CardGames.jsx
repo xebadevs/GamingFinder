@@ -6,7 +6,7 @@ export default function Card_games() {
   return (
     <div>
         <Navbar />
-        <ShowGames endpoint='filter' tag='card' title='CARD' />
+        <ShowGames category='card' title='CARD' />
     </div>
   )
 }

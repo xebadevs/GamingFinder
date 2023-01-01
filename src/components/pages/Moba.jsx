@@ -6,7 +6,7 @@ export default function Moba() {
   return (
     <div>
         <Navbar />
-        <ShowGames endpoint='filter' tag='moba' title='MOBA' />
+        <ShowGames category='moba' title='MOBA' />
     </div>
   )
 }

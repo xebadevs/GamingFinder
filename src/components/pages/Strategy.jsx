@@ -7,7 +7,7 @@ export default function Strategy() {
     <div>
         <Navbar />
         <div>
-        <ShowGames endpoint='filter' tag='strategy' title='STRATEGY' />
+        <ShowGames category='strategy' title='STRATEGY' />
         </div>
     </div>
   )
